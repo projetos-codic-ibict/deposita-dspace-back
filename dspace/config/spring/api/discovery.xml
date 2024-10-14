@@ -167,6 +167,10 @@
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterEntityType"/>
+                <ref bean="searchFilterCNPq" /> 
+                <ref bean="searchFilterLanguage" />
+                <ref bean="searchFilterInstituition" />
+                <ref bean="searchFilterKeyword" />
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -187,6 +191,10 @@
                 <ref bean="searchFilterIsOrgUnitOfPublicationRelation"/>
                 <ref bean="searchFilterIsPublicationOfJournalIssueRelation"/>
                 <ref bean="searchFilterIsJournalOfPublicationRelation"/>
+                <ref bean="searchFilterLanguage" />
+				<ref bean="searchFilterCNPq" />
+                <ref bean="searchFilterInstituition" />
+                <ref bean="searchFilterKeyword" />
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -315,6 +323,10 @@
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterEntityType"/>
+                <ref bean="searchFilterLanguage" />
+				<ref bean="searchFilterCNPq" />
+                <ref bean="searchFilterInstituition" />
+                <ref bean="searchFilterKeyword" />
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -335,6 +347,10 @@
                 <ref bean="searchFilterIsOrgUnitOfPublicationRelation"/>
                 <ref bean="searchFilterIsPublicationOfJournalIssueRelation"/>
                 <ref bean="searchFilterIsJournalOfPublicationRelation"/>
+                <ref bean="searchFilterLanguage" />
+				<ref bean="searchFilterCNPq" />
+                <ref bean="searchFilterInstituition" />
+                <ref bean="searchFilterKeyword" />
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -2349,6 +2365,55 @@
         <property name="pageSize" value="10"/>
         <property name="exposeMinAndMaxValue" value="true"/>
 
+    </bean>
+
+    <bean id="searchFilterLanguage" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="language"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.language.por</value>
+            </list>
+        </property>
+		<property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+	
+	<bean id="searchFilterCNPq" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
+		<property name="indexFieldName" value="cnpq"/>
+		<property name="metadataFields">
+			<list>
+				<value>dc.subject.cnpq</value>
+			</list>
+		</property>
+		<property name="facetLimit" value="10"/>
+		<property name="sortOrderSidebar" value="COUNT"/>
+		<property name="sortOrderFilterPage" value="COUNT"/>
+		<property name="splitter" value="::"/>
+	</bean>
+	
+	<bean id="searchFilterInstituition" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="name"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.publisher</value>
+            </list>
+        </property>
+		<property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+    
+    <bean id="searchFilterKeyword" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="keyword"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.subject</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
     </bean>
 
     <bean id="searchFilterContentInOriginalBundle" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">

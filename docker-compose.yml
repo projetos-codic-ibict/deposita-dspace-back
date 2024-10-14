@@ -18,7 +18,7 @@ services:
       dspace__P__dir: /dspace
       # Uncomment to set a non-default value for dspace.server.url or dspace.ui.url
       # dspace__P__server__P__url: http://localhost:8080/server
-      # dspace__P__ui__P__url: http://localhost:4000
+      dspace__P__ui__P__url: http://localhost:4000
       dspace__P__name: 'DSpace Started with Docker Compose'
       # db.url: Ensure we are using the 'dspacedb' image for our database
       db__P__url: 'jdbc:postgresql://dspacedb:5432/dspace'
@@ -68,21 +68,24 @@ services:
     # Uses a custom Postgres image with pgcrypto installed
     image: "${DOCKER_OWNER:-dspace}/dspace-postgres-pgcrypto:${DSPACE_VER:-dspace-7_x}"
     build:
-      # Must build out of subdirectory to have access to install script for pgcrypto
-      context: ./dspace/src/main/docker/dspace-postgres-pgcrypto/
+      context: ./dspace/src/main/docker/dspace-postgres-deposita/
+      additional_contexts:
+        # Must build out of subdirectory to have access to install script for pgcrypto
+        pgcrypto: ./dspace/src/main/docker/dspace-postgres-pgcrypto/
     environment:
-      PGDATA: /pgdata
+      # PGDATA: /pgdata
       POSTGRES_PASSWORD: dspace
     networks:
       dspacenet:
-    ports:
-    - published: 5432
-      target: 5432
+    # ports:
+    # - published: 5432
+    #   target: 5432
     stdin_open: true
-    tty: true
+    # tty: true
     volumes:
     # Keep Postgres data directory between reboots
-    - pgdata:/pgdata
+    # - pgdata:/pgdata
+    - ./dump:/dump
   # DSpace Solr container
   dspacesolr:
     container_name: dspacesolr
@@ -125,5 +128,5 @@ services:
       exec solr -f
 volumes:
   assetstore:
-  pgdata:
+  # pgdata:
   solr_data:
