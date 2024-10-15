@@ -170,6 +170,7 @@
                 <ref bean="searchFilterCNPq" /> 
                 <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterInstituition" />
+                <ref bean="searchFilterType" />
                 <ref bean="searchFilterKeyword" />
             </list>
         </property>
@@ -194,7 +195,8 @@
                 <ref bean="searchFilterLanguage" />
 				<ref bean="searchFilterCNPq" />
                 <ref bean="searchFilterInstituition" />
-                <ref bean="searchFilterKeyword" />
+                <ref bean="searchFilterType" />
+                <ref bean="searchFilterKeyword" />    
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -326,7 +328,7 @@
                 <ref bean="searchFilterLanguage" />
 				<ref bean="searchFilterCNPq" />
                 <ref bean="searchFilterInstituition" />
-                <ref bean="searchFilterKeyword" />
+             
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -350,7 +352,7 @@
                 <ref bean="searchFilterLanguage" />
 				<ref bean="searchFilterCNPq" />
                 <ref bean="searchFilterInstituition" />
-                <ref bean="searchFilterKeyword" />
+       
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -2340,7 +2342,7 @@
         <property name="indexFieldName" value="subject"/>
         <property name="metadataFields">
             <list>
-                <value>dc.subject.*</value>
+                <value>dc.subject</value>
             </list>
         </property>
         <property name="facetLimit" value="5"/>
@@ -2371,12 +2373,13 @@
         <property name="indexFieldName" value="language"/>
         <property name="metadataFields">
             <list>
-                <value>dc.language.por</value>
+                <value>dc.language</value>
             </list>
         </property>
 		<property name="facetLimit" value="10"/>
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
+   
     </bean>
 	
 	<bean id="searchFilterCNPq" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
@@ -2408,7 +2411,7 @@
         <property name="indexFieldName" value="keyword"/>
         <property name="metadataFields">
             <list>
-                <value>dc.subject</value>
+                <value>dc.subject.por</value>
             </list>
         </property>
         <property name="facetLimit" value="10"/>
