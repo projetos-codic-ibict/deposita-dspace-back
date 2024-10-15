@@ -171,7 +171,9 @@
                 <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterInstituition" />
                 <ref bean="searchFilterType" />
-                <ref bean="searchFilterKeyword" />
+               
+
+
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -196,7 +198,7 @@
 				<ref bean="searchFilterCNPq" />
                 <ref bean="searchFilterInstituition" />
                 <ref bean="searchFilterType" />
-                <ref bean="searchFilterKeyword" />    
+                
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -2411,10 +2413,10 @@
         <property name="indexFieldName" value="keyword"/>
         <property name="metadataFields">
             <list>
-                <value>dc.subject.por</value>
+                <value>cnpq_keyword</value>
             </list>
         </property>
-        <property name="facetLimit" value="10"/>
+        <property name="facetLimit" value="5"/>
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
     </bean>
