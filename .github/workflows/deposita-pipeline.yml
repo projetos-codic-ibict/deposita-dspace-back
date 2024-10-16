@@ -17,7 +17,7 @@ jobs:
     steps:
       - run: |
           echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S git pull
-          echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh ../../update-restart-backend.sh
+          echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh update-restart-backend.sh
         working-directory: /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6
 
   # PRD:
