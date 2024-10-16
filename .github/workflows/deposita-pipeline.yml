@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  SUDO_PASSWORD: ${{ secrets.SUDO_PASSWORD }}
+
 jobs:
   DEV:
     runs-on: [self-hosted, linux, x64, dev]
@@ -16,12 +19,10 @@ jobs:
     
     steps:
       - run: |
+          echo "ok ${{ secrets.SUDO_PASSWORD }}"
           echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S git pull
           sh ../../update-restart-backend.sh
         working-directory: /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6
-        env:
-          SUDO_USER: ${{ secrets.SUDO_USER }}
-          SUDO_PASSWORD: ${{ secrets.SUDO_PASSWORD }}
 
   # PRD:
   #   runs-on: [self-hosted, linux, x64, prd]
