@@ -3,7 +3,7 @@ version: "3.7"
 services:
   dspace7db:
     build:
-     context: ../postgres
+      context: ../postgres
       dockerfile: Dockerfile
     image: ibict/postgresdspace7
     container_name: dspace7db
