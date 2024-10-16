@@ -19,7 +19,7 @@ jobs:
     
     steps:
       - run: |
-          cd /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6 && echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S git pull
+          cd /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6 && git pull
           cd /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6 && sh ../../update-restart-backend.sh
 
   # PRD:
