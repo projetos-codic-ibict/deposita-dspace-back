@@ -14,8 +14,8 @@ services:
       - TZ=America/Sao_Paulo
     networks:
       - dspacenet
-  #    volumes:
-  #      -  ../../postgres-data:/var/lib/postgresql/data
+    volumes:
+      - dbdata:/var/lib/postgresql/data
 
   dspace7:
     container_name: dspace7
@@ -30,17 +30,16 @@ services:
     networks:
       - dspacenet
     ports:
-      - published: 9080 #Port for tomcat
-        target: 9080
+      - published: 8080 #Port for tomcat
+        target: 8080
     stdin_open: true
     tty: true
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      # Keep DSpace assetstore directory between reboots
-      - ../../dspace-install-dir:/dspace
-      - m2:/root/.m2
-      # - ./dspace/config:/dspace/config
+    # Keep DSpace assetstore directory between reboots
+      - assetstore:/dspace/assetstore
+      - ./dspace/config:/dspace/config
     entrypoint:
       - /bin/bash
       - "-c"
@@ -62,12 +61,8 @@ services:
     tty: true
     working_dir: /var/solr/data
     volumes:
-      - ../../dspace-install-dir/solr/authority/conf:/opt/solr/server/solr/configsets/authority/conf
-      - ../../dspace-install-dir/solr/oai/conf/:/opt/solr/server/solr/configsets/oai/conf
-      - ../../dspace-install-dir/solr/search/conf:/opt/solr/server/solr/configsets/search/conf
-      - ../../dspace-install-dir/solr/statistics/conf:/opt/solr/server/solr/configsets/statistics/conf
-      # Keep Solr data directory between reboots
-    #      - solr_data:/var/solr/data
+    # Keep Solr data directory between reboots
+      - solr_data:/var/solr/data
     # Initialize all DSpace Solr cores using the mounted local configsets (see above), then start Solr
     # * First, run precreate-core to create the core (if it doesn't yet exist). If exists already, this is a no-op
     # * Second, copy updated configs from mounted configsets to this core. If it already existed, this updates core
