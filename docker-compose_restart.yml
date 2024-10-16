@@ -29,7 +29,7 @@ services:
       proxies__P__trusted__P__ipranges: '172.23.0'
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_backend
     networks:
       - dspacenet
     ports:
