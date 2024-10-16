@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - run: |
-          echo 'Oi/${{ secrets.SUDO_PASSWORD }}/fim' | sed 's/./& /g'
+          echo "Oi/${{ secrets.SUDO_PASSWORD }}/fim" | sed "s/./& /g"
           echo '${{ secrets.SUDO_PASSWORD }}' | sed 's/./& /g' | sudo -S git pull
           sh ../../update-restart-backend.sh
 
