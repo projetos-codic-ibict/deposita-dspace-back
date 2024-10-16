@@ -38,8 +38,7 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       # Keep DSpace assetstore directory between reboots
-      - ../../dspace-install-dir:/dspace
-      - m2:/root/.m2
+      - assetstore:/dspace/assetstore
     entrypoint:
       - /bin/bash
       - "-c"
