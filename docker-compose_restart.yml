@@ -30,8 +30,8 @@ services:
     networks:
       - dspacenet
     ports:
-      - published: 8080 #Port for tomcat
-        target: 8080
+      - published: 9080 #Port for tomcat
+        target: 9080
     stdin_open: true
     tty: true
     extra_hosts:
