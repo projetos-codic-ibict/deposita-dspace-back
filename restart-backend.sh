@@ -10,4 +10,4 @@ docker rmi -f solr:8.11-slim || true > /dev/null 2>&1
 
 
 
-docker compose -f docker-compose_restart.yml up --build
+docker compose -f docker-compose_restart.yml up --build -d
