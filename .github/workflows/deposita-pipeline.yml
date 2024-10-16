@@ -1,0 +1,35 @@
+name: Pipeline - Deploy Deposita
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  DEV:
+    runs-on: [self-hosted, linux, x64, dev]
+    env:
+      ENVIRONMENT: DEV
+    environment:
+      name: DEV
+      url: 'http://172.16.24.33:8080/server'
+    
+    steps:
+      - run: |
+          sudo git pull
+          sh ../../update-restart-backend.sh
+        working-directory: /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6
+
+  # PRD:
+  #   runs-on: [self-hosted, linux, x64, prd]
+  #   env:
+  #     ENVIRONMENT: PRD
+  #   environment: 
+  #     name: PRD
+  #     url: 'https://deposita.ibict.br'
+  #   needs: DEV
+
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - run: |
+  #         sh ../../update-restart-backend.sh
