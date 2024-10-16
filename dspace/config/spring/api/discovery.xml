@@ -219,7 +219,6 @@
                 <ref bean="searchFilterContentInOriginalBundle" />
                 <ref bean="searchFilterEntityType" />
                 <ref bean="searchFilterCNPq" />
-                <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterInstituition" />
                 <ref bean="searchFilterType" />
 
@@ -402,7 +401,6 @@
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterContentInOriginalBundle" />
                 <ref bean="searchFilterEntityType" />
-                <ref bean="searchFilterLanguage" />
                 <ref bean="searchFilterCNPq" />
                 <ref bean="searchFilterInstituition" />
 
