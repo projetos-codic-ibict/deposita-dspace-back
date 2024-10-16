@@ -83,8 +83,9 @@ services:
         exec solr -f
 
 volumes:
+  dbdata:
   solr_data:
-  m2:
+  assetstore:
 
 networks:
   dspacenet:
