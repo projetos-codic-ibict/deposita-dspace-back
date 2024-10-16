@@ -1,11 +1,14 @@
-version: "3.7"
+version: '3.7'
+
 
 services:
+
   dspace7db:
     build:
       context: ../postgres
       dockerfile: Dockerfile
-    image: ibict/postgresdspace7
+    image:
+      ibict/postgresdspace7
     container_name: dspace7db
     ports:
       - "127.0.0.1:8787:5432"
@@ -14,16 +17,16 @@ services:
       - TZ=America/Sao_Paulo
     networks:
       - dspacenet
-    volumes:
-      - dbdata:/var/lib/postgresql/data
+  #    volumes:
+  #      -  ../../postgres-data:/var/lib/postgresql/data
 
   dspace7:
     container_name: dspace7
     environment:
       dspace__P__dir: /dspace
       solr__P__server: http://dspace7solr:8983/solr
-      TZ: "America/Sao_Paulo"
-      proxies__P__trusted__P__ipranges: "172.23.0"
+      TZ: 'America/Sao_Paulo'
+      proxies__P__trusted__P__ipranges: '172.23.0'
     build:
       context: .
       dockerfile: Dockerfile
@@ -37,12 +40,12 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-    # Keep DSpace assetstore directory between reboots
-      - installfolder:/dspace
-      - ./dspace/config:/dspace/config
+      # Keep DSpace assetstore directory between reboots
+      - ../../dspace-install-dir:/dspace
+      - m2:/root/.m2
     entrypoint:
       - /bin/bash
-      - "-c"
+      - '-c'
       - |
         /dspace/bin/dspace database migrate ignored
         ln -s /dspace/webapps/server /usr/local/tomcat/webapps/ || true
@@ -61,15 +64,19 @@ services:
     tty: true
     working_dir: /var/solr/data
     volumes:
-    # Keep Solr data directory between reboots
-      - solr_data:/var/solr/data
+      - ../../dspace-install-dir/solr/authority/conf:/opt/solr/server/solr/configsets/authority/conf
+      - ../../dspace-install-dir/solr/oai/conf/:/opt/solr/server/solr/configsets/oai/conf
+      - ../../dspace-install-dir/solr/search/conf:/opt/solr/server/solr/configsets/search/conf
+      - ../../dspace-install-dir/solr/statistics/conf:/opt/solr/server/solr/configsets/statistics/conf
+      # Keep Solr data directory between reboots
+    #      - solr_data:/var/solr/data
     # Initialize all DSpace Solr cores using the mounted local configsets (see above), then start Solr
     # * First, run precreate-core to create the core (if it doesn't yet exist). If exists already, this is a no-op
     # * Second, copy updated configs from mounted configsets to this core. If it already existed, this updates core
     #   to the latest configs. If it's a newly created core, this is a no-op.
     entrypoint:
       - /bin/bash
-      - "-c"
+      - '-c'
       - |
         init-var-solr
         precreate-core authority /opt/solr/server/solr/configsets/authority
@@ -82,10 +89,11 @@ services:
         cp -r -u /opt/solr/server/solr/configsets/statistics/* statistics
         exec solr -f
 
+
 volumes:
-  dbdata:
   solr_data:
-  installfolder:
+  m2:
+
 
 networks:
   dspacenet:
