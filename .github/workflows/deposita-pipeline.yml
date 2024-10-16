@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - run: |
-          sudo git pull
+          git pull
           sh ../../update-restart-backend.sh
         working-directory: /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6
 
