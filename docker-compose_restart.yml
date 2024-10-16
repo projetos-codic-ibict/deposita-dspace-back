@@ -1,14 +1,11 @@
-version: '3.7'
-
+version: "3.7"
 
 services:
-
   dspace7db:
     build:
-      context: postgres
+     context: ../postgres
       dockerfile: Dockerfile
-    image:
-      ibict/postgresdspace7
+    image: ibict/postgresdspace7
     container_name: dspace7db
     ports:
       - "127.0.0.1:8787:5432"
@@ -25,8 +22,8 @@ services:
     environment:
       dspace__P__dir: /dspace
       solr__P__server: http://dspace7solr:8983/solr
-      TZ: 'America/Sao_Paulo'
-      proxies__P__trusted__P__ipranges: '172.23.0'
+      TZ: "America/Sao_Paulo"
+      proxies__P__trusted__P__ipranges: "172.23.0"
     build:
       context: .
       dockerfile: Dockerfile
@@ -45,7 +42,7 @@ services:
       - m2:/root/.m2
     entrypoint:
       - /bin/bash
-      - '-c'
+      - "-c"
       - |
         /dspace/bin/dspace database migrate ignored
         ln -s /dspace/webapps/server /usr/local/tomcat/webapps/ || true
@@ -76,7 +73,7 @@ services:
     #   to the latest configs. If it's a newly created core, this is a no-op.
     entrypoint:
       - /bin/bash
-      - '-c'
+      - "-c"
       - |
         init-var-solr
         precreate-core authority /opt/solr/server/solr/configsets/authority
@@ -89,11 +86,9 @@ services:
         cp -r -u /opt/solr/server/solr/configsets/statistics/* statistics
         exec solr -f
 
-
 volumes:
   solr_data:
   m2:
-
 
 networks:
   dspacenet:
