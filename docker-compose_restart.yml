@@ -38,7 +38,9 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       # Keep DSpace assetstore directory between reboots
-      - assetstore:/dspace/assetstore
+      - ../../dspace-install-dir:/dspace
+      - m2:/root/.m2
+      # - ./dspace/config:/dspace/config
     entrypoint:
       - /bin/bash
       - "-c"
@@ -88,7 +90,6 @@ services:
 volumes:
   solr_data:
   m2:
-  assetstore:
 
 networks:
   dspacenet:
