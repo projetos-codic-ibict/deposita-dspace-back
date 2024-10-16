@@ -16,8 +16,8 @@ jobs:
     
     steps:
       - run: |
-          printf '%s\n' "${{ secrets.SUDO_PASSWORD }}"
-          printf '%s\n' "${{ secrets.SUDO_PASSWORD }}" | sudo -S git pull
+          echo 'oi:${{ secrets.SUDO_PASSWORD }}'
+          echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S git pull
           sh ../../update-restart-backend.sh
 
   # PRD:
