@@ -145,7 +145,7 @@
                     <dc-qualifier></dc-qualifier>
                     <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
-                    <label>Identifiers</label>
+                    <label>Identificadores</label>
                     <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
                     <hint>Preencha com as informações do identificador persistente utilizado.
                     </hint>
@@ -210,30 +210,6 @@
                     <required></required>
                 </field>
             </row>
-            <!-- <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>sponsorship</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Sponsors</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter the names of any sponsors and/or funding codes in the box.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Description</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter any other description or comments in this box.</hint>
-                    <required></required>
-                </field>
-            </row> -->
         </form>
 
 
