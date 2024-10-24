@@ -1,4 +1,3 @@
-```sql
 -- Adiciona metadata dc.description.region no registro de metadados
 INSERT INTO metadatafieldregistry (metadata_schema_id, element, qualifier) VALUES ((SELECT metadata_schema_id FROM metadataschemaregistry WHERE short_id = 'dc'), 'description', 'region');
 
@@ -33,4 +32,3 @@ FROM
 item
 JOIN collection ON item.owning_collection = collection.uuid
 WHERE item.in_archive = 't';
-```
