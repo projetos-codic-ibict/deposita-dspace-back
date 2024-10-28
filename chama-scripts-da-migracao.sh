@@ -5,10 +5,18 @@ ls -1 *.sql | while read arquivo; do
   docker cp "$arquivo" dspacedb:/tmp
 done
 
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/funcoes.sql"
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/deleta-itens-sem-dc-type.sql"
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/cria-metadado-regiao.sql"
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/preprocessa-tipos.sql"
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/deleta-dc-types-repetidos.sql"
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/cria-colecoes-de-tipos.sql"
-docker exec dspacedb psql -U dspace -d dspace -f "/tmp/atualiza-colecoes.sql"
+SCRIPTS=(
+  "/tmp/funcoes.sql"
+  "/tmp/deleta-itens-sem-dc-type.sql"
+  "/tmp/cria-metadado-regiao.sql"
+  "/tmp/preprocessa-tipos.sql"
+  "/tmp/deleta-dc-types-repetidos.sql"
+  "/tmp/cria-colecoes-de-tipos.sql"
+  "/tmp/atualiza-colecoes.sql"
+  "/tmp/apaga-colecoes-antigas.sql"
+)
+
+for script in ${SCRIPTS[@]}; do
+  echo "Rodando script $script"
+  docker exec dspacedb psql -U dspace -d dspace -f "$script"
+done
