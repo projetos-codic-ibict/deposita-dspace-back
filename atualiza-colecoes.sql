@@ -51,3 +51,12 @@ SET collection_id = (
 )
 
 ;
+
+INSERT INTO collection2item
+SELECT
+    item.owning_collection AS collection_id,
+    item.uuid AS item_id
+FROM item
+WHERE item.owning_collection IS NOT NULL
+
+;

@@ -69,6 +69,5 @@ WITH colecoes_antigas AS (
 
 DELETE FROM dspaceobject
 WHERE uuid IN (SELECT uuid FROM colecoes_antigas)
-RETURNING *
 
 ;
