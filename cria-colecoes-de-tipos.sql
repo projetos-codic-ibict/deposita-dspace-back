@@ -11,11 +11,21 @@ WITH tipos AS (
 
 uuids_das_colecoes AS (INSERT INTO dspaceobject (uuid) SELECT uuid FROM tipos),
 
-max_epersongroup_id AS (SELECT get_max_id('epersongroup', 'eperson_group_id') max_epersongroup_id),
+max_epersongroup_id AS (SELECT get_max_id('epersongroup', 'eperson_group_id') AS max_epersongroup_id),
 
-max_collection_id AS (SELECT get_max_id('collection', 'collection_id') max_collection_id),
+max_collection_id AS (SELECT get_max_id('collection', 'collection_id') AS max_collection_id),
 
-max_collectionrole_id AS (SELECT get_max_id('cwf_collectionrole', 'collectionrole_id') max_collectionrole_id),
+max_collectionrole_id AS (SELECT get_max_id('cwf_collectionrole', 'collectionrole_id') AS max_collectionrole_id),
+
+max_handle_id AS (SELECT get_max_id('handle', 'handle_id') AS max_handle_id),
+
+max_handle_number AS (
+    SELECT MAX(REGEXP_REPLACE(handle, '[^0-9]', '', 'g')::INTEGER) AS max_handle_number
+    FROM handle
+    -- Esta condição é necessária pois existe 1 registro que não segue esse
+    -- padrão (e o número dele é 0)
+    WHERE handle LIKE 'deposita/%'
+),
 
 novas_colecoes AS (
   INSERT INTO collection (
@@ -73,7 +83,7 @@ _insere_grupos_de_submit AS (
         nc.id_do_grupo_de_submit AS uuid,
         FALSE AS permanent,
         CONCAT('COLLECTION_', nc.collection_id, '_SUBMIT') AS name
-    FROM novas_colecoes nc
+    FROM novas_colecoes AS nc
 ),
 
 dados_epersongroup_mais_id_da_colecao AS (
@@ -83,16 +93,16 @@ dados_epersongroup_mais_id_da_colecao AS (
         FALSE AS permanent,
         CONCAT('COLLECTION_', nc.collection_id, '_WORKFLOW_STEP_2') AS name,
         nc.uuid AS id_da_colecao
-    FROM novas_colecoes nc
+    FROM novas_colecoes AS nc
 ),
 
 _insere_grupos_de_workflow_step AS (
     INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
     SELECT eperson_group_id, uuid, permanent, name
     FROM dados_epersongroup_mais_id_da_colecao
-)
+),
 
--- _insere_collection_role AS (
+_insere_collection_role AS (
     INSERT INTO cwf_collectionrole (collectionrole_id, role_id, collection_id, group_id)
     SELECT
         (SELECT max_collectionrole_id FROM max_collectionrole_id) + ROW_NUMBER() OVER () AS collectionrole_id,
@@ -100,6 +110,28 @@ _insere_grupos_de_workflow_step AS (
         dados_epersongroup_mais_id_da_colecao.id_da_colecao AS collection_id,
         dados_epersongroup_mais_id_da_colecao.uuid AS group_id
     FROM dados_epersongroup_mais_id_da_colecao
+),
 
+___ AS (
+    INSERT INTO community2collection
+    SELECT
+    nc.uuid AS collection_id,
+    (
+        SELECT uuid
+        FROM community
+        LIMIT 1 -- deposita só tem 1 comunidade
+    ) AS community_id
+    FROM novas_colecoes AS nc
+)
+
+INSERT INTO handle
+SELECT
+    (SELECT max_handle_id FROM max_handle_id) + ROW_NUMBER() OVER () AS handle_id, -- TODO
+    CONCAT('deposita/', (SELECT max_handle_number FROM max_handle_number) + ROW_NUMBER() OVER ()) AS handle,
+    -- Esta constante é definida no código, em dspace-api/src/main/java/org/dspace/core/Constants.java
+    3 AS resource_type_id,
+    NULL AS resource_legacy_id,
+    nc.uuid AS resource_id
+FROM novas_colecoes AS nc
 
 ;
