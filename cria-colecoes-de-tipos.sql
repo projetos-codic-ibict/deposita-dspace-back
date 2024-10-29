@@ -9,7 +9,7 @@ WITH tipos AS (
   WHERE metadata_field_id = get_metadata_field_id('type', NULL)
 ),
 
-uuids_das_colecoes AS (INSERT INTO dspaceobject (uuid) SELECT uuid FROM tipos),
+uuids_das_colecoes AS (INSERT INTO dspaceobject (uuid) SELECT uuid FROM tipos RETURNING *),
 
 max_epersongroup_id AS (SELECT get_max_id('epersongroup', 'eperson_group_id') AS max_epersongroup_id),
 
@@ -18,6 +18,8 @@ max_collection_id AS (SELECT get_max_id('collection', 'collection_id') AS max_co
 max_collectionrole_id AS (SELECT get_max_id('cwf_collectionrole', 'collectionrole_id') AS max_collectionrole_id),
 
 max_handle_id AS (SELECT get_max_id('handle', 'handle_id') AS max_handle_id),
+
+max_resourcepolicy_id AS (SELECT get_max_id('resourcepolicy', 'policy_id') AS max_resourcepolicy_id),
 
 max_handle_number AS (
     SELECT MAX(REGEXP_REPLACE(handle, '[^0-9]', '', 'g')::INTEGER) AS max_handle_number
@@ -76,7 +78,7 @@ _insere_metadados_das_novas_colecoes AS (
     FROM tipos ti
 ),
 
-_insere_grupos_de_submit AS (
+grupos_de_submit AS (
     INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
     SELECT
         (SELECT max_epersongroup_id FROM max_epersongroup_id) + ROW_NUMBER() OVER () AS eperson_group_id,
@@ -84,9 +86,10 @@ _insere_grupos_de_submit AS (
         FALSE AS permanent,
         CONCAT('COLLECTION_', nc.collection_id, '_SUBMIT') AS name
     FROM novas_colecoes AS nc
+    RETURNING *
 ),
 
-dados_epersongroup_mais_id_da_colecao AS (
+grupos_de_workflow_step_mais_id_da_colecao AS (
     SELECT
         (SELECT max_epersongroup_id FROM max_epersongroup_id) + ROW_NUMBER() OVER () AS eperson_group_id,
         nc.id_do_grupo_de_workflow_step AS uuid,
@@ -99,7 +102,45 @@ dados_epersongroup_mais_id_da_colecao AS (
 _insere_grupos_de_workflow_step AS (
     INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
     SELECT eperson_group_id, uuid, permanent, name
-    FROM dados_epersongroup_mais_id_da_colecao
+    FROM grupos_de_workflow_step_mais_id_da_colecao
+),
+
+uuid_do_grupo_anonimo AS (
+    SELECT uuid FROM epersongroup WHERE name = 'Anonymous'
+),
+
+uuid_do_grupo_administrador AS (
+    SELECT uuid FROM epersongroup WHERE name = 'Administrator'
+),
+
+grupos_de_submit_em_group2group AS (
+    INSERT INTO group2group (parent_id, child_id)
+    SELECT
+        uuid AS parent_id,
+        (SELECT uuid FROM uuid_do_grupo_anonimo) AS child_id
+    FROM grupos_de_submit
+    RETURNING *
+),
+
+_insere_grupos_de_submit_em_group2group_cache AS (
+    INSERT INTO group2groupcache (parent_id, child_id)
+    SELECT *
+    FROM grupos_de_submit_em_group2group
+),
+
+grupos_de_workflow_step_em_group2group AS (
+    INSERT INTO group2group (parent_id, child_id)
+    SELECT
+        uuid AS parent_id,
+        (SELECT uuid FROM uuid_do_grupo_administrador) AS child_id
+    FROM grupos_de_workflow_step_mais_id_da_colecao
+    RETURNING *
+),
+
+_insere_grupos_de_workflow_step_em_group2groupcache AS (
+    INSERT INTO group2groupcache (parent_id, child_id)
+    SELECT *
+    FROM grupos_de_workflow_step_em_group2group
 ),
 
 _insere_collection_role AS (
@@ -107,9 +148,36 @@ _insere_collection_role AS (
     SELECT
         (SELECT max_collectionrole_id FROM max_collectionrole_id) + ROW_NUMBER() OVER () AS collectionrole_id,
         'editor' AS role_id,
-        dados_epersongroup_mais_id_da_colecao.id_da_colecao AS collection_id,
-        dados_epersongroup_mais_id_da_colecao.uuid AS group_id
-    FROM dados_epersongroup_mais_id_da_colecao
+        g.id_da_colecao AS collection_id,
+        g.uuid AS group_id
+    FROM grupos_de_workflow_step_mais_id_da_colecao AS g
+),
+
+action_id_epersongroup_id AS (
+    SELECT *
+    FROM (
+        VALUES
+            (0, (SELECT uuid FROM uuid_do_grupo_anonimo)),
+            (10, (SELECT uuid FROM uuid_do_grupo_anonimo)),
+            (9, (SELECT uuid FROM uuid_do_grupo_anonimo)),
+            (3, (SELECT uuid FROM uuid_do_grupo_administrador)),
+            (3, (SELECT uuid FROM uuid_do_grupo_administrador))
+    ) AS action_id(action_id, epersongroup_id)
+),
+
+_insere_resource_policy AS (
+    INSERT INTO resourcepolicy (policy_id, resource_type_id, resource_id, action_id, epersongroup_id, dspace_object)
+    SELECT
+        (SELECT max_resourcepolicy_id FROM max_resourcepolicy_id) + ROW_NUMBER() OVER () AS policy_id, -- computar
+        -- Esta constante é definida no código, em dspace-api/src/main/java/org/dspace/core/Constants.java
+        3 AS resource_type_id,
+        (SELECT collection_id FROM collection WHERE uuid = uc.uuid) AS resource_id,
+        action_id_epersongroup_id.action_id,
+        action_id_epersongroup_id.epersongroup_id,
+        uc.uuid AS dspace_object -- uuid da coleção
+    FROM uuids_das_colecoes AS uc
+    JOIN action_id_epersongroup_id
+    ON TRUE
 ),
 
 ___ AS (
