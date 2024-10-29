@@ -14,15 +14,7 @@ SELECT
   ) AS metadata_field_id,
   (
     SELECT text_value FROM metadatavalue
-    WHERE dspace_object_id = collection.uuid AND
-          metadata_field_id = (
-                                SELECT metadata_field_id
-                                FROM metadatafieldregistry
-                                WHERE
-                                  metadata_schema_id = (SELECT metadata_schema_id FROM metadataschemaregistry where short_id = 'dc') AND
-                                  element = 'title' AND
-                                  qualifier IS NULL
-                              )
+    WHERE dspace_object_id = collection.uuid AND metadata_field_id = get_metadata_field_id('title', NULL)
   ) AS text_value,
   'por' AS text_lang,
   0 AS place,
