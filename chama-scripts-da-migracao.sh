@@ -7,10 +7,10 @@ done
 
 SCRIPTS=(
   "/tmp/funcoes.sql"
-  "/tmp/deleta-itens-sem-dc-type.sql"
+  "/tmp/deleta-dc-types-repetidos.sql"
+  "/tmp/deleta-itens-com-dc-type-invalido.sql"
   "/tmp/cria-metadado-regiao.sql"
   "/tmp/preprocessa-tipos.sql"
-  "/tmp/deleta-dc-types-repetidos.sql"
   "/tmp/cria-colecoes-de-tipos.sql"
   "/tmp/atualiza-colecoes.sql"
   "/tmp/apaga-colecoes-antigas.sql"

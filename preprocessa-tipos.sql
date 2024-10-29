@@ -1,33 +1,19 @@
--- 'Livro' -> 'book'
--- 'Dissertaçaõ' -> 'Dissertação'
--- 'Artigo' -> 'article'
--- 'Artigo de evento'
--- 'Capítulo de livro' -> 'bookPart'
--- 'Tese'
--- 'mastherThesis'
--- 'doctoralThesis'
--- 'Trabalho de conclusão de curso' -> 'bachelorThesis'
--- 'conferenceObject'
--- 'other'
--- 'Objetos de aprendizagem'
--- 'Relatório' -> 'report'
--- 'Dados científicos'
-
 WITH nomes as (
   SELECT *
   FROM
   (
     VALUES
-      -- OBS.: Acho que isso pode falhar se o nome da esquerda for usado várias
-      -- vezes, mas nesse caso não é.
-      ('book', 'Livro'),
-      ('Dissertaçaõ', 'Dissertação'),
-      ('article', 'Artigo'),
-      ('bookPart', 'Capítulo de livro'),
-      ('bachelorThesis', 'Trabalho de conclusão de curso'),
-      ('report', 'Relatório')
+      ('Artigo', 'article'),
+      ('Artigo de evento', 'conferenceObject'),
+      ('Capítulo de livro', 'bookPart'),
+      ('Dissertaçaõ', 'masterThesis'),
+      ('Dissertação', 'masterThesis'),
+      ('mastherThesis', 'masterThesis'),
+      ('Livro', 'book'),
+      ('Tese', 'doctoralThesis'),
+      ('Trabalho de conclusão de curso', 'bachelorThesis')
   )
-  as t (nome_antigo, nome_novo)
+  as t(nome_antigo, nome_novo)
 )
 UPDATE metadatavalue
 SET text_value = (SELECT nome_novo from nomes where nome_antigo = text_value)
