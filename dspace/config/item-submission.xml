@@ -19,6 +19,15 @@
     <submission-map>
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="traditional"/>
+        
+
+        <name-map collection-handle="deposita/667" submission-name="article"/>
+        <name-map collection-handle="deposita/668" submission-name="bachelorThesis"/>
+        <name-map collection-handle="deposita/669" submission-name="book"/>
+        <name-map collection-handle="deposita/670" submission-name="bookPart"/>
+        <name-map collection-handle="deposita/671" submission-name="conferenceObject"/>
+        <name-map collection-handle="deposita/672" submission-name="doctoralThesis"/>
+        <name-map collection-handle="deposita/673" submission-name="masterThesis"/>
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
@@ -88,6 +97,138 @@
     <!-- Messages.properties -->
     <!-- -->
     <step-definitions>
+        <step-definition id="publisher" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="person" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="person-fields" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="journal" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="course" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="program" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="article1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="article2" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="article3" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="bachelorThesis1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="book1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="book2" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="book3" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="bookPart1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="bookPart2" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="bookPart3" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="conferenceObject1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="conferenceObject2" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="conferenceObject3" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="tese1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="tese2" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="tese3" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
         <!-- The "collection" step is a "special step" which is *REQUIRED* -->
         <!-- In DSpace, all submitted items must be immediately assigned -->
         <!-- to a collection. This step ensures that a collection is always selected. -->
@@ -248,6 +389,91 @@
     <!-- -->
     <!-- -->
     <submission-definitions>
+        <submission-process name="article">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="article1"/>
+            <step id="publisher"/>
+            <step id="article2"/>
+            <step id="journal"/>
+            <step id="article3"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="bachelorThesis">
+            <step id="collection"/>
+            <step id="person-fields"/>
+            <step id="tese1"/>
+            <step id="tese2"/>
+            <step id="publisher"/>
+            <step id="course"/>
+            <step id="program"/>
+            <step id="tese3"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="book">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="book1"/>
+            <step id="publisher"/>
+            <step id="book2"/>
+            <step id="upload"/>
+            <step id="book3"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="bookPart">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="bookPart1"/>
+            <step id="publisher"/>
+            <step id="bookPart2"/>
+            <step id="upload"/>
+            <step id="bookPart3"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="conferenceObject">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="conferenceObject1"/>
+            <step id="publisher"/>
+            <step id="conferenceObject2"/>
+            <step id="journal"/>
+            <step id="upload"/>
+            <step id="conferenceObject3"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="doctoralThesis">
+            <step id="collection"/>
+            <step id="person-fields"/>
+            <step id="tese1"/>
+            <step id="tese2"/>
+            <step id="publisher"/>
+            <step id="course"/>
+            <step id="program"/>
+            <step id="tese3"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="masterThesis">
+            <step id="collection"/>
+            <step id="person-fields"/>
+            <step id="tese1"/>
+            <step id="tese2"/>
+            <step id="publisher"/>
+            <step id="course"/>
+            <step id="program"/>
+            <step id="tese3"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+    
 
         <!--This "traditional" process defines the DEFAULT item submission process -->
         <submission-process name="traditional">
