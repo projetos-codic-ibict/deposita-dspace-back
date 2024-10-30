@@ -30,4 +30,13 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-
+CREATE OR REPLACE FUNCTION renomeia_metadado_tipo(nome_antigo TEXT, nome_novo TEXT)
+RETURNS VOID AS $$
+BEGIN
+  UPDATE metadatavalue
+  SET text_value = nome_novo
+  WHERE
+    metadata_field_id = get_metadata_field_id('type', NULL)
+    AND text_value = nome_antigo;
+END;
+$$ LANGUAGE plpgsql;
