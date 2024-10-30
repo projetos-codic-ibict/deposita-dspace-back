@@ -20,6 +20,14 @@
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="traditional"/>
 
+        <name-map collection-handle="deposita/667" submission-name="article"/>
+        <!-- <name-map collection-handle="deposita/668" submission-name="bachelorThesis"/> -->
+        <!-- <name-map collection-handle="deposita/669" submission-name="book"/> -->
+        <!-- <name-map collection-handle="deposita/670" submission-name="bookPart"/> -->
+        <!-- <name-map collection-handle="deposita/671" submission-name="conferenceObject"/> -->
+        <!-- <name-map collection-handle="deposita/672" submission-name="doctoralThesis"/> -->
+        <!-- <name-map collection-handle="deposita/673" submission-name="masterThesis"/> -->
+
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
              This sets up the following Entity-based Collections in that dataset:
@@ -88,6 +96,12 @@
     <!-- Messages.properties -->
     <!-- -->
     <step-definitions>
+        <step-definition id="article1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
         <!-- The "collection" step is a "special step" which is *REQUIRED* -->
         <!-- In DSpace, all submitted items must be immediately assigned -->
         <!-- to a collection. This step ensures that a collection is always selected. -->
@@ -248,6 +262,12 @@
     <!-- -->
     <!-- -->
     <submission-definitions>
+        <submission-process name="article">
+            <step id="collection"/>
+            <step id="article1"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
 
         <!--This "traditional" process defines the DEFAULT item submission process -->
         <submission-process name="traditional">
