@@ -21,16 +21,68 @@
     <!-- serves as a 'this field is required' flag.                           -->
 
     <form-definitions>
-        <form name="article1">
+        <form name="publisher">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>name</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Nome da instituição</label>
                     <input-type>onebox</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.</hint>
+                    <hint>Informe o nome completo, por extenso, da instituição seguido pela sigla entre parênteses. Exemplo de preenchimento: Universidade de Brasília (UnB).
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>publisherurl</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>URL da página da intituição</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL da página oficial da instituição.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>ror</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador ROR</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma ROR. Faça a busca pela instituição na página: https://ror.org/</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>isni</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador ISNI</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma ISNI. Faça a busca pela instituição na página:  https://isni.oclc.org/
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>wikidata</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Wikidata</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma Wikidata. Faça a busca pela instituição na página: https://www.wikidata.org/wiki/Wikidata:Main_Page
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -38,23 +90,57 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>publisher</dc-element>
-                    <dc-qualifier>name</dc-qualifier>
+                    <dc-qualifier>type</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Instituição*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Nome da instituição por extenso. Caso sua instituição não esteja listada, clique aqui para solicitar o cadastramento da instituição.</hint>
+                    <label>Tipo da instituição</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o tipo da instituição. Exemplos: Editora, Universidade, Instituto de pesquisa e etc.
+                    </hint>
                     <required></required>
                 </field>
             </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Tipo de documento*</label>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>juridicnature</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Natureza jurídica da instituição
+                    </label>
                     <input-type>onebox</input-type>
-                    <hint>Selecione o tipo de documento.</hint>
+                    <hint>Indique a natureza jurídica da instituição.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>País da instituição</label>
+                    <input-type>onebox</input-type>
+                    <hint>Indique o país de origem da instituição.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+
+        </form>
+
+
+        <form name="article1">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Autor(es)</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -64,9 +150,10 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Título*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o título do documento. Recomenda-se preencher com a tradução do título do documento em inglês para maior visibilidade do documento.</hint>
+                    <label>Título</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o título conforme o documento original. O campo deve ser preenchido com caixa baixa, exceto siglas e nomes próprios. Exemplo: A história de João da Silva em Brasília-DF.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -76,105 +163,10 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Título alternativo</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o título alternativo. Recomenda-se preencher com a tradução do título do documento em inglês, para maior visibilidade do documento.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>issued</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Ano da publicação*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o ano da publicação do documento descrito.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Autor(es)*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o nome do(s) autor(es), conforme o formato de citação.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>relation</dc-element>
-                    <dc-qualifier>ispartof</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Título do periódico*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o título do periódico.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>volume</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Volume do periódico</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o volume do periódico.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>issue</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Número de edição do periódico</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe o número de edição do periódico.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>spage</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Página inicial</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe a página inicial.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>epage</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Página final</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe a página final.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>country</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>País*</label>
+                    <label>Título em outro idioma*</label>
                     <input-type>onebox</input-type>
-                    <hint>Informe o país.</hint>
+                    <hint>Informe o título em outro idioma, preferencialmente o inglês.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -184,33 +176,36 @@
                     <dc-element>language</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Idioma*</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe o idioma em que o documento está escrito.</hint>
+                    <label>Idioma de publicação</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>Selecione o idioma original do documento.
+                    </hint>
                     <required></required>
                 </field>
             </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>uri</dc-qualifier>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Identificador persistente</label>
+                    <label>Resumo</label>
                     <input-type>textarea</input-type>
-                    <hint>Preencha com as informações do identificador persistente utilizado.</hint>
+                    <hint>Informe o resumo conforme o documento original.
+                    </hint>
                     <required></required>
                 </field>
             </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>issn</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>ISSN</label>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Resumo em outro idioma</label>
                     <input-type>textarea</input-type>
-                    <hint>Informe o ISSN.</hint>
+                    <hint>Informe o resumo em outro idioma, preferencialmente o inglês.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -220,9 +215,10 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Palavras-chave*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. Sugere-se também o uso de termos em inglês.</hint>
+                    <label>Palavras-chave</label>
+                    <input-type>tag</input-type>
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -233,8 +229,9 @@
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Palavras-chave em outro idioma</label>
-                    <input-type>textarea</input-type>
-                    <hint>nan</hint>
+                    <input-type>tag</input-type>
+                    <hint>Informe as palavras-chave em outro idioma, preferencialmente o inglês. Utilize uma nova entrada para cada palavra individualmente.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -244,9 +241,105 @@
                     <dc-element>knowledgearea</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Áreas de conhecimento de acordo com tabela do CNPq*</label>
+                    <label>Área de conhecimento CNPq</label>
+                    <input-type>textarea</input-type>
+                    <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Ano de publicação</label>
+                    <input-type>date</input-type>
+                    <hint>Informe o ano de publicação ou disponibilização do documento.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>url</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publicação original</label>
                     <input-type>onebox</input-type>
-                    <hint>Selecione a(s) área(s) de conhecimento correspondente(s), de acordo com tabela do CNPq.</hint>
+                    <hint>Informe a URL  da página de publicação do documento original.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>volume</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Volume do periódico
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o volume do periódico.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>issue</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Número de edição do periódico
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o número de edição do periódico.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>spage</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Página inicial
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a página inicial.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>epage</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Página final
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a página final.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador persistente</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o link do identificador persistente do documento, caso exista. Exemplos: DOI (Digital Object Identifier), Handle, URN, PURL, ARK. 
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -254,15 +347,55 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
-                    <dc-qualifier>resumo</dc-qualifier>
+                    <dc-qualifier>reference</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Resumo*</label>
-                    <input-type>textarea</input-type>
-                    <hint>Resumo do documento. Preencha o campo de acordo com o idioma do documento.</hint>
+                    <label>Referência bibliográfica</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a referência bibliográfica do documento, conforme as instruções da ABNT/NBR 6023.
+                    </hint>
                     <required></required>
                 </field>
             </row>
             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Citação</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe como citar o documento. Use as normas de acordo com a área, por exemplo: ABNT, APA, Vancouver.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>sponsorship</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Agência(s) de fomento*</label>
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença**</label>
+                    <input-type>onebox</input-type>
+                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <!-- <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
@@ -285,6 +418,61 @@
                     <hint>Referência bibliográfica do documento. Use as normas de acordo com a área, por exemplo: ABNT, APA, Vancouver.</hint>
                     <required></required>
                 </field>
+            </row> -->
+        </form>
+
+        <form name="bachelorThesis1">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Autor(es)</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o título conforme o documento original. O campo deve ser preenchido com caixa baixa, exceto siglas e nomes próprios. Exemplo: A história de João da Silva em Brasília-DF.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Título em outro idioma*</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o título em outro idioma, preferencialmente o inglês.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Idioma de publicação</label>
+                    <input-type>onebox</input-type>
+                    <hint>Selecione o idioma original do documento.
+                    </hint>
+                    <required></required>
+                </field>
             </row>
         </form>
 
@@ -296,10 +484,10 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Title</label>
+                    <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the file.</hint>
-                    <required>You must enter a name for this file</required>
+                    <hint>Insira o nome do arquivo.</hint>
+                    <required>Você deve inserir um nome para este arquivo</required>
                 </field>
             </row>
             <row>
@@ -307,9 +495,9 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <repeatable>true</repeatable>
-                    <label>Description</label>
+                    <label>Descrição</label>
                     <input-type>textarea</input-type>
-                    <hint>Enter a description for the file</hint>
+                    <hint>Insira uma descrição para o arquivo</hint>
                     <required></required>
                 </field>
             </row>
@@ -324,9 +512,9 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Author</label>
+                    <label>Autor(es)</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the author's name (Family name, Given names).</hint>
+                    <hint>Informe o nome do(s) autor(es), conforme o formato de citação.</hint>
                     <required></required>
                 </field>
             </row>
@@ -336,10 +524,10 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Title</label>
+                    <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the main title of the item.</hint>
-                    <required>You must enter a main title for this item.</required>
+                    <hint>Informe o título do documento. Recomenda-se preencher com a tradução do título do documento em inglês para maior visibilidade do documento.</hint>
+                    <required>Você deve inserir um título principal para este item.</required>
                 </field>
             </row>
             <row>
@@ -348,9 +536,9 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Other Titles</label>
+                    <label>Título alternativo</label>
                     <input-type>onebox</input-type>
-                    <hint>If the item has any alternative titles, please enter them here.</hint>
+                    <hint>Informe o título alternativo. Recomenda-se preencher com a tradução do título do documento em inglês, para maior visibilidade do documento.</hint>
                     <required></required>
                 </field>
             </row>
@@ -360,13 +548,12 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Date of Issue</label>
+                    <label>Ano da publicação</label>
                     <style>col-sm-4</style>
                     <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution.
-                        You can leave out the day and/or month if they aren't applicable.
+                    <hint>Informe o ano da publicação do documento descrito.
                     </hint>
-                    <required>You must enter at least the year.</required>
+                    <required>Você deve inserir pelo menos o ano.</required>
                 </field>
 
                 <field>
@@ -374,10 +561,10 @@
                     <dc-element>publisher</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Publisher</label>
+                    <label>Instituição</label>
                     <style>col-sm-8</style>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
+                    <hint>Nome da instituição por extenso. Caso sua instituição não esteja listada, clique aqui para solicitar o cadastramento da instituição.</hint>
                     <required></required>
                 </field>
             </row>
@@ -387,9 +574,9 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>citation</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Citation</label>
+                    <label>Citação</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the standard citation for the previously issued instance of this item.</hint>
+                    <hint>Referência bibliográfica do documento. Use as normas de acordo com a área, por exemplo: ABNT, APA, Vancouver.</hint>
                     <required></required>
                 </field>
             </row>
@@ -399,9 +586,10 @@
                     <dc-element>relation</dc-element>
                     <dc-qualifier>ispartofseries</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Series/Report No.</label>
+                    <label>Título do evento</label>
                     <input-type>series</input-type>
-                    <hint>Enter the series and number assigned to this item by your community.</hint>
+                    <hint>Informe o título do evento.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -412,10 +600,9 @@
                     <dc-qualifier></dc-qualifier>
                     <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
-                    <label>Identifiers</label>
+                    <label>Identificadores</label>
                     <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-                    <hint>If the item has any identification numbers or codes associated with
-                        it, please enter the types and the actual numbers or codes.
+                    <hint>Preencha com as informações do identificador persistente utilizado.
                     </hint>
                     <required></required>
                 </field>
@@ -426,9 +613,9 @@
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Type</label>
+                    <label>Tipo de documento</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
-                    <hint>Select the type of content of the item.
+                    <hint>Selecione o tipo de documento.
                     </hint>
                     <required></required>
                 </field>
@@ -439,11 +626,9 @@
                     <dc-element>language</dc-element>
                     <dc-qualifier>iso</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Language</label>
+                    <label>Idioma</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does not appear in the
-                        list, please select 'Other'. If the content does not really have a language (for example, if it
-                        is a dataset or an image) please select 'N/A'.
+                    <hint>Informe o idioma em que o documento está escrito.
                     </hint>
                     <required></required>
                 </field>
@@ -460,9 +645,10 @@
                     <dc-qualifier></dc-qualifier>
                     <!-- An input-type of tag MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
-                    <label>Subject Keywords</label>
+                    <label>Palavras-chave</label>
                     <input-type>tag</input-type>
-                    <hint>Enter appropriate subject keywords or phrases.</hint>
+                    <hint>Informe as palavras-chave do documento descrito. Sugere-se também o uso de termos em inglês.
+                    </hint>
                     <required></required>
                     <vocabulary>srsc</vocabulary>
                 </field>
@@ -475,31 +661,7 @@
                     <repeatable>false</repeatable>
                     <label>Abstract</label>
                     <input-type>textarea</input-type>
-                    <hint>Enter the abstract of the item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>sponsorship</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Sponsors</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter the names of any sponsors and/or funding codes in the box.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Description</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter any other description or comments in this box.</hint>
+                    <hint>Abstract do documento. Preencha com o resumo em língua estrangeira.</hint>
                     <required></required>
                 </field>
             </row>
