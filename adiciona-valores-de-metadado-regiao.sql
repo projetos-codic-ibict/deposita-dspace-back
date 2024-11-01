@@ -1,6 +1,3 @@
--- Adiciona metadata dc.description.region no registro de metadados
-INSERT INTO metadatafieldregistry (metadata_schema_id, element, qualifier) VALUES ((SELECT metadata_schema_id FROM metadataschemaregistry WHERE short_id = 'dc'), 'description', 'region');
-
 -- Adiciona o metadado de região para cada item
 INSERT INTO metadatavalue (metadata_field_id, text_value, text_lang, place, authority, dspace_object_id)
 SELECT
