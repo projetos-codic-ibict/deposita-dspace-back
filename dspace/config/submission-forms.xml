@@ -126,24 +126,117 @@
                     <required></required>
                 </field>
             </row>
-
         </form>
 
-
-        <form name="article1">
+        <form name="person">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Autor(es)</label>
+                    <dc-qualifier>name</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome completo</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
                     </hint>
                     <required></required>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o ID lattes do pesquisador. O identificador se encontra na página do Currículo Lattes do pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>orcid</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o identificador Orcid do pesquisador. O identificador se encontra na página do Orcid do pesquisador (https://orcid.org/). Caso o pesquisador não possua cadastro no Orcid, recomanda-se a sua realização.</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
+        <form name="journal">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>journal</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título da revista</label>
+                    <input-type>onebox</input-type>
+                   <hint>O título da revista deve ser preenchido da mesma forma que o campo "Key title", presente no registro da revista na rede ISSN. Essa informação pode ser verificada no link: https://portal.issn.org/ </hint> 
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>issn</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ISSN</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o número de ISSN, conforme consta no registro da revista na rede ISSN. Essa informação pode ser verificada no link: https://portal.issn.org/ 
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>issnl</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ISSN-L</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o número de ISSN-L, conforme consta no registro da revista na rede ISSN. Essa informação pode ser verificada no link: https://portal.issn.org/ 
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>urljournal</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Página da revista</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL da página oficial da revista.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>País de publicação</label>
+                    <input-type>onebox</input-type>
+                    <hint>Indique o país de publicação da revista.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
+        <form name="article1">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1917,52 +2010,94 @@
           -->
         <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
             <pair>
-                <displayed-value>N/A</displayed-value>
+                <displayed-value>Português</displayed-value>
                 <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>English (United States)</displayed-value>
-                <stored-value>en_US</stored-value>
+                <displayed-value>Aimará
+                </displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>English</displayed-value>
-                <stored-value>en</stored-value>
+                <displayed-value>Alemão</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>Spanish</displayed-value>
-                <stored-value>es</stored-value>
+                <displayed-value>Árabe
+                </displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>German</displayed-value>
-                <stored-value>de</stored-value>
+                <displayed-value>Chinês</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>French</displayed-value>
-                <stored-value>fr</stored-value>
+                <displayed-value>Espanhol</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>Italian</displayed-value>
-                <stored-value>it</stored-value>
+                <displayed-value>Francês</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>Japanese</displayed-value>
-                <stored-value>ja</stored-value>
+                <displayed-value>Grego</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>Chinese</displayed-value>
-                <stored-value>zh</stored-value>
+                <displayed-value>Guarani</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>Portuguese</displayed-value>
-                <stored-value>pt</stored-value>
+                <displayed-value>Hindi</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>Turkish</displayed-value>
-                <stored-value>tr</stored-value>
+                <displayed-value>Holandês</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
-                <displayed-value>(Other)</displayed-value>
-                <stored-value>other</stored-value>
+                <displayed-value>Inglês</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Italiano</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Japonês</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Latim</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Macro-jê</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Maya</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Náhuatl</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Polonês</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Quíchua</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Russo</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Tupi</displayed-value>
+                <stored-value></stored-value>
             </pair>
         </value-pairs>
 
