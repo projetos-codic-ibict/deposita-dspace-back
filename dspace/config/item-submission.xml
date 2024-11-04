@@ -23,7 +23,7 @@
 
         <name-map collection-handle="deposita/667" submission-name="article"/>
         <name-map collection-handle="deposita/668" submission-name="bachelorThesis"/>
-        <!-- <name-map collection-handle="deposita/669" submission-name="book"/> -->
+        <name-map collection-handle="deposita/669" submission-name="book"/>
         <!-- <name-map collection-handle="deposita/670" submission-name="bookPart"/> -->
         <!-- <name-map collection-handle="deposita/671" submission-name="conferenceObject"/> -->
         <!-- <name-map collection-handle="deposita/672" submission-name="doctoralThesis"/> -->
@@ -109,7 +109,25 @@
             <type>submission-form</type>
         </step-definition>
 
+        <step-definition id="banca" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
         <step-definition id="journal" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="course" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="program" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
@@ -127,11 +145,11 @@
             <type>submission-form</type>
         </step-definition>
 
-        <!-- <step-definition id="book1" mandatory="true">
+        <step-definition id="book1" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
-        </step-definition> -->
+        </step-definition>
 
        
 
@@ -307,17 +325,24 @@
 
         <submission-process name="bachelorThesis">
             <step id="collection"/>
+            <step id="person"/>
+            <step id="banca"/>
             <step id="bachelorThesis1"/>
+            <step id="publisher"/>
+            <step id="course"/>
+            <step id="program"/>
             <step id="upload"/>
             <step id="license"/>
         </submission-process>
 
-        <!-- <submission-process name="book">
+        <submission-process name="book">
             <step id="collection"/>
+            <step id="person"/>
             <step id="book1"/>
+            <step id="publisher"/>
             <step id="upload"/>
             <step id="license"/>
-        </submission-process> -->
+        </submission-process>
 
     
 
