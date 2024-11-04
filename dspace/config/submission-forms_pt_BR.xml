@@ -128,6 +128,124 @@
             </row>
         </form>
 
+        <form name="banca">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>name</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Orientador (a)*</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o ID lattes do pesquisador. O identificador se encontra na página do Currículo Lattes do pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>orcid</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o identificador Orcid do pesquisador. O identificador se encontra na página do Orcid do pesquisador (https://orcid.org/). Caso o pesquisador não possua cadastro no Orcid, recomanda-se a sua realização.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>name</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Co-orientador (a)</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o ID lattes do pesquisador. O identificador se encontra na página do Currículo Lattes do pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>orcid</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o identificador Orcid do pesquisador. O identificador se encontra na página do Orcid do pesquisador (https://orcid.org/). Caso o pesquisador não possua cadastro no Orcid, recomanda-se a sua realização.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>name</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Membros da banca*</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o ID lattes do pesquisador. O identificador se encontra na página do Currículo Lattes do pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>orcid</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Lattes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o identificador Orcid do pesquisador. O identificador se encontra na página do Orcid do pesquisador (https://orcid.org/). Caso o pesquisador não possua cadastro no Orcid, recomanda-se a sua realização.</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+        
+
         <form name="person">
             <row>
                 <field>
@@ -236,6 +354,181 @@
             </row>
         </form>
 
+        <form name="course">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>coursename</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome do curso</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo, por extenso, do curso como indicado pela instituição. Exemplo de preenchimento: Mestrado em Ciência da Informação.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>coursedepartment</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Departamento do curso</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o departamento, instituto, escola ou faculdade que abriga o curso.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>coursedegree</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Grau do curso</label>
+                    <input-type value-pairs-name="course_degree">dropdown</input-type>
+                    <hint>Indique o grau do curso.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>coursetype</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Tipo do curso</label>
+                    <input-type value-pairs-name="course_type">dropdown</input-type>
+                    <hint>Indique o tipo do curso.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>courseurl</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>URL da página do curso</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL  da página do departamento, instituto, escola ou faculdade que abriga o curso.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>capes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador Capes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma Sucupira. Faça a busca pela instituição na página: https://sucupira.capes.gov.br/sucupira/public/index.xhtml
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>cnpq</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador CNPq</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma CADI. Faça a busca pela instituição na página: http://di.cnpq.br/di/cadi/consultaInst.do
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
+        <form name="program">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>programname</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome do programa de pós-graduação</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo, por extenso, do Programa de Pós- graduação como indicado pela instituição. 
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>knowledgearea</dc-element>
+                    <dc-qualifier>cnpq</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Área do conhecimento CNPq</label>
+                    <input-type value-pairs-name="knowledge_area">dropdown</input-type>
+                    <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>knowledgearea</dc-element>
+                    <dc-qualifier>capes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Área de avaliação Capes</label>
+                    <input-type value-pairs-name="capes">dropdown</input-type>
+                    <hint>Indique a área de avaliação da Capes, de acordo com a classificação do Programa de Pós-graduação. Caso o programa ainda não tenha sido avaliado, indique “Programa não avaliado”.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>programurl</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>URL da página do programa</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL da página do Programa de Pós-graduação.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>capes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identidicador Capes</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma Sucupira. Faça a busca pela instituição na página: https://sucupira.capes.gov.br/sucupira/public/index.xhtml
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>cnpq</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Idenficador CNPq</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o indicador único da instituição gerado pela plataforma CADI. Faça a busca pela instituição na página: http://di.cnpq.br/di/cadi/consultaInst.do
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+        
         <form name="article1">
             <row>
                 <field>
@@ -469,7 +762,7 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type>onebox</input-type>
+                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
                     <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
                     </hint>
                     <required></required>
@@ -482,7 +775,7 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Licença**</label>
-                    <input-type>onebox</input-type>
+                    <input-type value-pairs-name="rights">dropdown</input-type>
                     <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
                     </hint>
                     <required></required>
@@ -518,16 +811,203 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Autor(es)</label>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
+                    <hint>Informe o título conforme o documento original. O campo deve ser preenchido com caixa baixa, exceto siglas e nomes próprios. Exemplo: A história de João da Silva em Brasília-DF.
                     </hint>
                     <required></required>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Título em outro idioma*</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o título em outro idioma, preferencialmente o inglês.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Idioma de publicação</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>Selecione o idioma original do documento.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Resumo</label>
+                    <input-type>textarea</input-type>
+                    <hint>Informe o resumo conforme o documento original.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Resumo em outro idioma</label>
+                    <input-type>textarea</input-type>
+                    <hint>Informe o resumo em outro idioma, preferencialmente o inglês.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Palavras-chave</label>
+                    <input-type>tag</input-type>
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Palavras-chave em outro idioma</label>
+                    <input-type>tag</input-type>
+                    <hint>Informe as palavras-chave em outro idioma, preferencialmente o inglês. Utilize uma nova entrada para cada palavra individualmente.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>knowledgearea</dc-element>
+                    <dc-qualifier>cnpq</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Área de conhecimento CNPq</label>
+                    <input-type value-pairs-name="knowledge_area">dropdown</input-type>
+                    <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Ano de publicação</label>
+                    <input-type>date</input-type>
+                    <hint>Informe o ano de publicação ou disponibilização do documento.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>url</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publicação original</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL  da página de publicação do documento original.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador persistente
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o link do identificador persistente do documento, caso exista. Exemplos: DOI (Digital Object Identifier), Handle, URN, PURL, ARK. 
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>reference</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Referência bibliográfica*
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a referência bibliográfica do documento, conforme as instruções da ABNT/NBR 6023.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Citação</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe como citar o documento. Use as normas de acordo com a área, por exemplo: ABNT, APA, Vancouver.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>sponsorship</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Agência(s) de fomento*</label>
+                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença**</label>
+                    <input-type value-pairs-name="rights">dropdown</input-type>
+                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
+        <form name="book1">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -561,8 +1041,205 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Idioma de publicação</label>
-                    <input-type>onebox</input-type>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
                     <hint>Selecione o idioma original do documento.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Resumo</label>
+                    <input-type>textarea</input-type>
+                    <hint>Informe o resumo conforme o documento original.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Resumo em outro idioma</label>
+                    <input-type>textarea</input-type>
+                    <hint>Informe o resumo em outro idioma, preferencialmente o inglês.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Palavras-chave</label>
+                    <input-type>tag</input-type>
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Palavras-chave em outro idioma</label>
+                    <input-type>tag</input-type>
+                    <hint>Informe as palavras-chave em outro idioma, preferencialmente o inglês. Utilize uma nova entrada para cada palavra individualmente.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>knowledgearea</dc-element>
+                    <dc-qualifier>cnpq</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Área de conhecimento CNPq</label>
+                    <input-type value-pairs-name="knowledge_area">dropdown</input-type>
+                    <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Ano de publicação</label>
+                    <input-type>date</input-type>
+                    <hint>Informe o ano de publicação ou disponibilização do documento.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>isbn</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ISBN</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o número de ISBN do livro.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>url</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publicação original</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL  da página de publicação do documento original.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>issue</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título da coleção</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o título da coleção.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>relation</dc-element>
+                    <dc-qualifier>ispartof</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Número do livro na coleção*
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o número do livro na coleção.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Identificador persistente
+                    </label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o link do identificador persistente do documento, caso exista. Exemplos: DOI (Digital Object Identifier), Handle, URN, PURL, ARK. 
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>reference</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Referência bibliográfica</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a referência bibliográfica do documento, conforme as instruções da ABNT/NBR 6023.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Citação</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe como citar o documento. Use as normas de acordo com a área, por exemplo: ABNT, APA, Vancouver.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>sponsorship</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Agência(s) de fomento*</label>
+                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença**</label>
+                    <input-type value-pairs-name="rights">dropdown</input-type>
+                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
                     </hint>
                     <required></required>
                 </field>
@@ -2047,6 +2724,266 @@
                 <stored-value></stored-value>
             </pair>
         </value-pairs>
+
+        <value-pairs value-pairs-name="course_degree" dc-term="publisher.coursedegree">
+            <pair>
+                <displayed-value>Graduação</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Especialização</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Mestrado</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Doutorado</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Pós-doutorado</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="course_type" dc-term="publisher.coursetype">
+            <pair>
+                <displayed-value>Acadêmico</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Profissional</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="capes" dc-term="knowledgearea.capes">
+            <pair>
+                <displayed-value>Programa não avaliado</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Administração pública e de empresas, Ciências contábeis e Turismo</displayed-value>
+                <stored-value>Administração pública e de empresas, Ciências contábeis e Turismo</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Antropologia / Arqueologia</displayed-value>
+                <stored-value>Antropologia / Arqueologia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Arquitetura, urbanismo e design</displayed-value>
+                <stored-value>Arquitetura, urbanismo e design</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Artes</displayed-value>
+                <stored-value>Artes</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Astronomia / Física</displayed-value>
+                <stored-value>Astronomia / Física</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Biodiversidade</displayed-value>
+                <stored-value>Biodiversidade</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Biotecnologia</displayed-value>
+                <stored-value>Biotecnologia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciência da computação</displayed-value>
+                <stored-value>Ciência da computação</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciência de alimentos</displayed-value>
+                <stored-value>Ciência de alimentos</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciência política e Relações internacionais</displayed-value>
+                <stored-value>Ciência política e Relações internacionais</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciências agrárias I</displayed-value>
+                <stored-value>Ciências agrárias I</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciências ambientais</displayed-value>
+                <stored-value>Ciências ambientais</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciências biológicas I</displayed-value>
+                <stored-value>Ciências biológicas I</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciências biológicas II</displayed-value>
+                <stored-value>Ciências biológicas II</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciências biológicas III</displayed-value>
+                <stored-value>Ciências biológicas III</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ciências da religião e Teologia</displayed-value>
+                <stored-value>Ciências da religião e Teologia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Comunicação e informação</displayed-value>
+                <stored-value>Comunicação e informação</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Direito</displayed-value>
+                <stored-value>Direito</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Economia</displayed-value>
+                <stored-value>Economia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Educação</displayed-value>
+                <stored-value>Educação</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Educação física</displayed-value>
+                <stored-value>Educação física</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Enfermagem</displayed-value>
+                <stored-value>Enfermagem</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Engenharias I</displayed-value>
+                <stored-value>Engenharias I</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Engenharias II</displayed-value>
+                <stored-value>Engenharias II</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Engenharias III</displayed-value>
+                <stored-value>Engenharias III</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Engenharias IV</displayed-value>
+                <stored-value>Engenharias IV</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ensino</displayed-value>
+                <stored-value>Ensino</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Farmácia</displayed-value>
+                <stored-value>Farmácia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Filosofia</displayed-value>
+                <stored-value>Filosofia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Geociências</displayed-value>
+                <stored-value>Geociências</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Geografia</displayed-value>
+                <stored-value>Geografia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>História</displayed-value>
+                <stored-value>História</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Interdisciplinar</displayed-value>
+                <stored-value>Interdisciplinar</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Linguística e literatura</displayed-value>
+                <stored-value>Linguística e literatura</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Matemática / Probabilidade e estatística</displayed-value>
+                <stored-value>Matemática / Probabilidade e estatística</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Materiais</displayed-value>
+                <stored-value>Materiais</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Medicina I</displayed-value>
+                <stored-value>Medicina I</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Medicina II</displayed-value>
+                <stored-value>Medicina II</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Medicina III</displayed-value>
+                <stored-value>Medicina III</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Medicina veterinária</displayed-value>
+                <stored-value>Medicina veterinária</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Nutrição</displayed-value>
+                <stored-value>Nutrição</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Odontologia</displayed-value>
+                <stored-value>Odontologia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Planejamento urbano e regional / Demografia</displayed-value>
+                <stored-value>Planejamento urbano e regional / Demografia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Psicologia</displayed-value>
+                <stored-value>Psicologia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Química</displayed-value>
+                <stored-value>Química</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Saúde coletiva</displayed-value>
+                <stored-value>Saúde coletiva</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Serviço social</displayed-value>
+                <stored-value>Serviço social</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Sociologia</displayed-value>
+                <stored-value>Sociologia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Zootecnia / Recursos pesqueiros</displayed-value>
+                <stored-value>Zootecnia / Recursos pesqueiros</stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="sponsorship" dc-term="description.sponsorship">
+            <pair>
+                <displayed-value>Sim</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Não</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="rights" dc-term="rights">
+            <pair>
+                <displayed-value>Eu concedo a licença</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Eu não concedo a licença</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+        </value-pairs>
+        
 
         <!-- default language order: (from dspace 1.2.1)
              "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
