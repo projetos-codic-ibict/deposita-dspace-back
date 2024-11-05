@@ -24,10 +24,10 @@
         <name-map collection-handle="deposita/667" submission-name="article"/>
         <name-map collection-handle="deposita/668" submission-name="bachelorThesis"/>
         <name-map collection-handle="deposita/669" submission-name="book"/>
-        <!-- <name-map collection-handle="deposita/670" submission-name="bookPart"/> -->
-        <!-- <name-map collection-handle="deposita/671" submission-name="conferenceObject"/> -->
-        <!-- <name-map collection-handle="deposita/672" submission-name="doctoralThesis"/> -->
-        <!-- <name-map collection-handle="deposita/673" submission-name="masterThesis"/> -->
+        <name-map collection-handle="deposita/670" submission-name="bookPart"/>
+        <name-map collection-handle="deposita/671" submission-name="conferenceObject"/>
+        <name-map collection-handle="deposita/672" submission-name="doctoralThesis"/>
+        <name-map collection-handle="deposita/673" submission-name="masterThesis"/>
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
@@ -109,7 +109,19 @@
             <type>submission-form</type>
         </step-definition>
 
-        <step-definition id="banca" mandatory="true">
+        <step-definition id="banca-orientador" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="banca-coorientador" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="banca-membros" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
@@ -151,7 +163,23 @@
             <type>submission-form</type>
         </step-definition>
 
-       
+        <step-definition id="bookPart1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="conferenceObject1" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="tese" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
 
         <!-- The "collection" step is a "special step" which is *REQUIRED* -->
         <!-- In DSpace, all submitted items must be immediately assigned -->
@@ -326,7 +354,9 @@
         <submission-process name="bachelorThesis">
             <step id="collection"/>
             <step id="person"/>
-            <step id="banca"/>
+            <step id="banca-orientador"/>
+            <step id="banca-coorientador"/>
+            <step id="banca-membros"/>
             <step id="bachelorThesis1"/>
             <step id="publisher"/>
             <step id="course"/>
@@ -344,6 +374,51 @@
             <step id="license"/>
         </submission-process>
 
+        <submission-process name="bookPart">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="bookPart1"/>
+            <step id="publisher"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="conferenceObject">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="conferenceObject1"/>
+            <step id="publisher"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="doctoralThesis">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="tese"/>
+            <step id="banca-orientador"/>
+            <step id="banca-coorientador"/>
+            <step id="banca-membros"/>
+            <step id="publisher"/>
+            <step id="course"/>
+            <step id="program"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="masterThesis">
+            <step id="collection"/>
+            <step id="person"/>
+            <step id="tese"/>
+            <step id="banca-orientador"/>
+            <step id="banca-coorientador"/>
+            <step id="banca-membros"/>
+            <step id="publisher"/>
+            <step id="course"/>
+            <step id="program"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
     
 
         <!--This "traditional" process defines the DEFAULT item submission process -->
