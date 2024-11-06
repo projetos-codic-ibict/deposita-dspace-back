@@ -16,15 +16,12 @@ max_epersongroup_id AS (SELECT get_max_id('epersongroup', 'eperson_group_id') AS
 max_collection_id AS (SELECT get_max_id('collection', 'collection_id') AS max_collection_id),
 
 novas_colecoes AS (
-  INSERT INTO collection (
-    collection_id,
-    uuid
-  )
   SELECT
-    (SELECT max_collection_id FROM max_collection_id) + ROW_NUMBER() OVER () AS id,
-    ti.uuid AS uuid
+    (SELECT max_collection_id FROM max_collection_id) + ROW_NUMBER() OVER () AS collection_id,
+    ti.uuid AS uuid,
+    GEN_RANDOM_UUID() AS id_do_grupo_de_submit,
+    GEN_RANDOM_UUID() AS id_do_grupo_de_workflow_step
   FROM tipos AS ti
-  RETURNING *, GEN_RANDOM_UUID() AS id_do_grupo_de_submit, GEN_RANDOM_UUID() AS id_do_grupo_de_workflow_step
 ),
 
 uuids_dos_grupos_de_submit AS (
@@ -64,15 +61,14 @@ _insere_metadados_das_novas_colecoes AS (
     FROM tipos ti
 ),
 
-grupos_de_submit AS (
-    INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
+grupos_de_submit_mais_id_da_colecao AS (
     SELECT
         (SELECT max_epersongroup_id FROM max_epersongroup_id) + ROW_NUMBER() OVER () AS eperson_group_id,
         nc.id_do_grupo_de_submit AS uuid,
         FALSE AS permanent,
-        CONCAT('COLLECTION_', nc.collection_id, '_SUBMIT') AS name
+        CONCAT('COLLECTION_', nc.collection_id, '_SUBMIT') AS name,
+        nc.uuid AS id_da_colecao
     FROM novas_colecoes AS nc
-    RETURNING *
 ),
 
 grupos_de_workflow_step_mais_id_da_colecao AS (
@@ -85,10 +81,21 @@ grupos_de_workflow_step_mais_id_da_colecao AS (
     FROM novas_colecoes AS nc
 ),
 
-_insere_grupos_de_workflow_step AS (
+_insere_grupos_de_submit_e_workflow_step AS (
     INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
     SELECT eperson_group_id, uuid, permanent, name
-    FROM grupos_de_workflow_step_mais_id_da_colecao
+    FROM (
+        SELECT eperson_group_id, uuid, permanent, name, 1 AS source_order FROM grupos_de_submit_mais_id_da_colecao
+        UNION ALL
+        SELECT eperson_group_id, uuid, permanent, name, 2 AS source_order FROM grupos_de_workflow_step_mais_id_da_colecao
+    ) AS combined
+    ORDER BY eperson_group_id, source_order
+    RETURNING *
+),
+
+_insere_novas_colecoes AS (
+    INSERT INTO collection (collection_id, uuid, submitter)
+    SELECT collection_id, uuid, id_do_grupo_de_submit AS submitter FROM novas_colecoes
 ),
 
 uuid_do_grupo_anonimo AS (
@@ -104,7 +111,7 @@ grupos_de_submit_em_group2group AS (
     SELECT
         uuid AS parent_id,
         (SELECT uuid FROM uuid_do_grupo_anonimo) AS child_id
-    FROM grupos_de_submit
+    FROM grupos_de_submit_mais_id_da_colecao
     RETURNING *
 ),
 
@@ -157,7 +164,7 @@ _insere_resource_policy AS (
         NEXTVAL('resourcepolicy_seq') AS policy_id,
         -- Esta constante é definida no código, em dspace-api/src/main/java/org/dspace/core/Constants.java
         3 AS resource_type_id,
-        (SELECT collection_id FROM collection WHERE uuid = uc.uuid) AS resource_id,
+        (SELECT collection_id FROM novas_colecoes WHERE uuid = uc.uuid) AS resource_id,
         action_id_epersongroup_id.action_id,
         action_id_epersongroup_id.epersongroup_id,
         uc.uuid AS dspace_object -- uuid da coleção
