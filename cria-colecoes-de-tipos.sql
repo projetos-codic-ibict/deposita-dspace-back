@@ -21,6 +21,8 @@ novas_colecoes AS (
     ti.uuid AS uuid,
     GEN_RANDOM_UUID() AS id_do_grupo_de_submit,
     GEN_RANDOM_UUID() AS id_do_grupo_de_workflow_step
+    -- GEN_RANDOM_UUID() AS id_do_grupo_de_workflow_step,
+    -- GEN_RANDOM_UUID() AS id_do_grupo_de_workflow_step1
   FROM tipos AS ti
 ),
 
@@ -63,7 +65,7 @@ _insere_metadados_das_novas_colecoes AS (
 
 grupos_de_submit_mais_id_da_colecao AS (
     SELECT
-        (SELECT max_epersongroup_id FROM max_epersongroup_id) + ROW_NUMBER() OVER () AS eperson_group_id,
+        (SELECT max_epersongroup_id FROM max_epersongroup_id) + 1 + 2 * ((ROW_NUMBER() OVER ()) - 1) AS eperson_group_id,
         nc.id_do_grupo_de_submit AS uuid,
         FALSE AS permanent,
         CONCAT('COLLECTION_', nc.collection_id, '_SUBMIT') AS name,
@@ -73,23 +75,33 @@ grupos_de_submit_mais_id_da_colecao AS (
 
 grupos_de_workflow_step_mais_id_da_colecao AS (
     SELECT
-        (SELECT max_epersongroup_id FROM max_epersongroup_id) + ROW_NUMBER() OVER () AS eperson_group_id,
+        (SELECT max_epersongroup_id FROM max_epersongroup_id) + 2 + 2 * ((ROW_NUMBER() OVER ()) - 1) AS eperson_group_id,
         nc.id_do_grupo_de_workflow_step AS uuid,
         FALSE AS permanent,
         CONCAT('COLLECTION_', nc.collection_id, '_WORKFLOW_STEP_2') AS name,
         nc.uuid AS id_da_colecao
     FROM novas_colecoes AS nc
+    -- UNION
+    -- SELECT
+    --     (SELECT max_epersongroup_id FROM max_epersongroup_id) + 3 + 2 * (COUNT(nc.*) - 1) AS eperson_group_id,
+    --     nc.id_do_grupo_de_workflow_step1 AS uuid,
+    --     FALSE AS permanent,
+    --     CONCAT('COLLECTION_', nc.collection_id, '_WORKFLOW_STEP_1') AS name,
+    --     nc.uuid AS id_da_colecao
+    -- FROM
+    --     novas_colecoes AS nc
+    -- LIMIT 1
 ),
 
 _insere_grupos_de_submit_e_workflow_step AS (
     INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
     SELECT eperson_group_id, uuid, permanent, name
     FROM (
-        SELECT eperson_group_id, uuid, permanent, name, 1 AS source_order FROM grupos_de_submit_mais_id_da_colecao
+        SELECT eperson_group_id, uuid, permanent, name, ROW_NUMBER() OVER () AS rn, 1 AS source_order FROM grupos_de_submit_mais_id_da_colecao
         UNION ALL
-        SELECT eperson_group_id, uuid, permanent, name, 2 AS source_order FROM grupos_de_workflow_step_mais_id_da_colecao
+        SELECT eperson_group_id, uuid, permanent, name, ROW_NUMBER() OVER () AS rn, 2 AS source_order FROM grupos_de_workflow_step_mais_id_da_colecao
     ) AS combined
-    ORDER BY eperson_group_id, source_order
+    ORDER BY rn, source_order
     RETURNING *
 ),
 
