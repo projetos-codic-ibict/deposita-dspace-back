@@ -203,7 +203,7 @@ SELECT
     CONCAT('deposita/', NEXTVAL('handle_seq')) AS handle,
     -- Esta constante é definida no código, em dspace-api/src/main/java/org/dspace/core/Constants.java
     3 AS resource_type_id,
-    NULL AS resource_legacy_id,
+    nc.collection_id AS resource_legacy_id,
     nc.uuid AS resource_id
 FROM novas_colecoes AS nc
 
