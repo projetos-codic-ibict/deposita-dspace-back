@@ -12,6 +12,7 @@ SCRIPTS=(
   "/tmp/cria-metadados-necessarios.sql"
   "/tmp/adiciona-valores-de-metadado-regiao.sql"
   "/tmp/preprocessa-tipos.sql"
+  "/tmp/cria-colecao.sql"
   "/tmp/cria-colecoes-de-tipos.sql"
   "/tmp/atualiza-colecoes.sql"
   "/tmp/apaga-colecoes-antigas.sql"
