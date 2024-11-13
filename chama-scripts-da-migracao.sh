@@ -1,9 +1,6 @@
 #!/usr/bin/bash
 
-# Copia os arquivos de script
-ls -1 *.sql | while read arquivo; do
-  docker cp "$arquivo" dspacedb:/tmp
-done
+./copia-scripts-da-migracao.sh
 
 SCRIPTS=(
   "/tmp/funcoes.sql"
