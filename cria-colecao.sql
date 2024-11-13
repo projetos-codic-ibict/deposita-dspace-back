@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION cria_objeto()
+CREATE OR REPLACE FUNCTION _cria_objeto()
 RETURNS UUID AS $$
 DECLARE
     uuid_do_objeto UUID;
@@ -11,14 +11,14 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION cria_grupo_da_colecao(nome TEXT, child_id UUID, uuid_da_colecao UUID)
+CREATE OR REPLACE FUNCTION _cria_grupo_da_colecao(nome TEXT, child_id UUID, uuid_da_colecao UUID)
 RETURNS UUID AS $$
 DECLARE
     uuid_do_grupo UUID;
     eperson_group_id INTEGER;
 BEGIN
     eperson_group_id := (SELECT MAX(epersongroup.eperson_group_id) FROM epersongroup) + 1;
-    uuid_do_grupo := cria_objeto();
+    uuid_do_grupo := _cria_objeto();
 
     INSERT INTO epersongroup (eperson_group_id, uuid, permanent, name)
     VALUES (eperson_group_id, uuid_do_grupo, FALSE, nome);
@@ -30,7 +30,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION cria_collectionrole(uuid_da_colecao UUID, uuid_do_grupo_de_workflow_step UUID)
+CREATE OR REPLACE FUNCTION _cria_collectionrole(uuid_da_colecao UUID, uuid_do_grupo_de_workflow_step UUID)
 RETURNS VOID AS $$
 BEGIN
     INSERT INTO cwf_collectionrole (collectionrole_id, role_id, collection_id, group_id)
@@ -43,7 +43,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION cria_resourcepolicy(resource_id INTEGER, action_id INTEGER, epersongroup_id UUID, dspace_object UUID)
+CREATE OR REPLACE FUNCTION _cria_resourcepolicy(resource_id INTEGER, action_id INTEGER, epersongroup_id UUID, dspace_object UUID)
 RETURNS INTEGER AS $$
 DECLARE
     id_da_politica INTEGER;
@@ -65,7 +65,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION cria_handle(uuid_da_colecao UUID, id_da_colecao INTEGER)
+CREATE OR REPLACE FUNCTION _cria_handle(uuid_da_colecao UUID, id_da_colecao INTEGER)
 RETURNS TEXT AS $$
 DECLARE
     uuid_do_grupo UUID;
@@ -87,7 +87,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION cria_metadados_da_colecao(nome TEXT, uuid_da_colecao UUID, handle TEXT)
+CREATE OR REPLACE FUNCTION _cria_metadados_da_colecao(nome TEXT, uuid_da_colecao UUID, handle TEXT)
 RETURNS VOID AS $$
 DECLARE
     title_field_id INTEGER;
@@ -121,7 +121,6 @@ DECLARE
     collection_id INTEGER;
     submitter UUID;
     handle TEXT;
-    nome TEXT;
     uuid_do_grupo_de_workflow_step UUID;
     uuid_do_grupo_anonimo UUID;
     uuid_do_grupo_administrador UUID;
@@ -133,29 +132,27 @@ BEGIN
     SELECT uuid INTO uuid_do_grupo_anonimo FROM epersongroup WHERE name = 'Anonymous';
     SELECT uuid INTO uuid_do_grupo_administrador FROM epersongroup WHERE name = 'Administrator';
     collection_id := get_max_id('collection', 'collection_id') + 1;
-    uuid_da_colecao := cria_objeto();
+    uuid_da_colecao := _cria_objeto();
     -- Cria grupo de submit
-    submitter := cria_grupo_da_colecao(CONCAT('COLLECTION_', collection_id, '_SUBMIT'), uuid_do_grupo_anonimo, uuid_da_colecao);
+    submitter := _cria_grupo_da_colecao(CONCAT('COLLECTION_', collection_id, '_SUBMIT'), uuid_do_grupo_anonimo, uuid_da_colecao);
 
     INSERT INTO collection (collection_id, uuid, submitter)
     VALUES (collection_id, uuid_da_colecao, submitter);
 
-    uuid_do_grupo_de_workflow_step := cria_grupo_da_colecao(CONCAT('COLLECTION_', collection_id, '_WORKFLOW_STEP_2'), uuid_do_grupo_administrador, uuid_da_colecao);
+    uuid_do_grupo_de_workflow_step := _cria_grupo_da_colecao(CONCAT('COLLECTION_', collection_id, '_WORKFLOW_STEP_2'), uuid_do_grupo_administrador, uuid_da_colecao);
 
-    PERFORM cria_collectionrole(uuid_da_colecao, uuid_do_grupo_de_workflow_step);
+    PERFORM _cria_collectionrole(uuid_da_colecao, uuid_do_grupo_de_workflow_step);
 
     FOREACH action_id IN ARRAY ARRAY[0, 10, 9, 3, 3] LOOP
-        PERFORM cria_resourcepolicy(collection_id, action_id, uuid_do_grupo_anonimo, uuid_da_colecao);
+        PERFORM _cria_resourcepolicy(collection_id, action_id, uuid_do_grupo_anonimo, uuid_da_colecao);
     END LOOP;
 
     INSERT INTO community2collection (collection_id, community_id) VALUES (uuid_da_colecao, uuid_da_comunidade);
 
-    handle := cria_handle(uuid_da_colecao, collection_id);
+    handle := _cria_handle(uuid_da_colecao, collection_id);
 
-    PERFORM cria_metadados_da_colecao(nome, uuid_da_colecao, handle);
+    PERFORM _cria_metadados_da_colecao(nome, uuid_da_colecao, handle);
 
     RETURN uuid_da_colecao;
 END;
 $$ LANGUAGE plpgsql;
-
-SELECT cria_colecao('luganenhum');

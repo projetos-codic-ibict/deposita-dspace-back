@@ -17,14 +17,14 @@ WITH novas_colecoes AS (
 ), colecoes_mais_titulos AS (
     SELECT colecao.*, mv.text_value titulo
     FROM collection AS colecao
-    JOIN metadatavalue mv
+    JOIN metadatavalue AS mv
     ON
         mv.metadata_field_id = get_metadata_field_id('title', NULL) AND
         mv.dspace_object_id = colecao.uuid
 ), itens_mais_novos_uuids AS (
     SELECT item.*, colecao.uuid AS uuid_da_nova_colecao
     FROM itens_mais_tipos AS item
-    JOIN colecoes_mais_titulos colecao
+    JOIN colecoes_mais_titulos AS colecao
     ON
         item.tipo = colecao.titulo
 ), atualiza_em_item AS (
