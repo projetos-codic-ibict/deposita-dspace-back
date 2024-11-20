@@ -219,7 +219,6 @@
                 <ref bean="searchFilterContentInOriginalBundle" />
                 <ref bean="searchFilterEntityType" />
                 <ref bean="searchFilterCNPq" />
-                <!-- <ref bean="searchFilterLanguage" /> -->
                 <ref bean="searchFilterInstituition" />
                 <ref bean="searchFilterType" />
 
@@ -272,9 +271,10 @@
         <property name="defaultFilterQueries">
             <list>
                 <!--Only
-                find items, communities and collections-->
-                <value>(search.resourcetype:Item AND latestVersion:true) OR
-                    search.resourcetype:Collection OR search.resourcetype:Community</value>
+                find items-->
+                <value>search.resourcetype:Item AND latestVersion:true</value>
+                <!-- <value>(search.resourcetype:Item AND latestVersion:true) OR
+                search.resourcetype:Collection OR search.resourcetype:Community</value> -->
                 <value>-withdrawn:true AND -discoverable:false</value>
             </list>
         </property>
@@ -401,7 +401,6 @@
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterContentInOriginalBundle" />
                 <ref bean="searchFilterEntityType" />
-                <!-- <ref bean="searchFilterLanguage" /> -->
                 <ref bean="searchFilterCNPq" />
                 <ref bean="searchFilterInstituition" />
 
@@ -452,10 +451,11 @@
         <property name="defaultFilterQueries">
             <list>
                 <!--Only
-                find items, communities and collections-->
+                find items -->
                 <!-- NOTE: NOT filtered on latestVersion = true -->
-                <value>search.resourcetype:Item OR search.resourcetype:Collection OR
-                    search.resourcetype:Community</value>
+                <value>search.resourcetype:Item</value>
+                <!-- <value>search.resourcetype:Item OR search.resourcetype:Collection OR
+                    search.resourcetype:Community</value> -->
                 <value>-withdrawn:true AND -discoverable:false</value>
             </list>
         </property>
