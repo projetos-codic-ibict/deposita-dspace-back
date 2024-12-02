@@ -241,7 +241,13 @@ public class InstallItemServiceImpl implements InstallItemService {
         // delete all related supervision orders
         deleteSupervisionOrders(c, item);
 
+        adicionaDcTypeDaColecao(c, item, is);
+
         return item;
+    }
+
+    private void adicionaDcTypeDaColecao(Context c, Item item, InProgressSubmission is) throws SQLException, AuthorizeException {
+        itemService.addMetadata(c, item, MetadataSchemaEnum.DC.getName(), "type", null, null, is.getCollection().getName());
     }
 
     private void deleteSupervisionOrders(Context c, Item item) throws SQLException, AuthorizeException {
