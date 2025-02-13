@@ -28,12 +28,23 @@
         <field>
             <dc-schema>dc</dc-schema>
             <dc-element>contributor</dc-element>
-            <dc-qualifier>author</dc-qualifier>
-            <repeatable>true</repeatable>
-            <label>Nome completo*</label>
+            <dc-qualifier>lastName</dc-qualifier>
+            <repeatable>false</repeatable>
+            <label>Último Nome</label>
             <input-type>onebox</input-type>
-            <hint>Informe o nome completo do autor. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.</hint>
-            <required>true</required>
+            <hint>Informe o último nome do autor. Exemplo: Silva</hint>
+            <required></required>
+        </field>
+
+        <field>
+            <dc-schema>dc</dc-schema>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>firstName</dc-qualifier>
+            <repeatable>false</repeatable>
+            <label>Primeiro Nome</label>
+            <input-type>onebox</input-type>
+            <hint>Informe o primeiro nome do autor. Exemplo: João Gomes da</hint>
+            <required></required>
         </field>
     </row>
 
@@ -300,19 +311,30 @@
         </form>
 
         <form name="person">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nome completo</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
+    <row>
+        <field>
+            <dc-schema>dc</dc-schema>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>lastName</dc-qualifier>
+            <repeatable>false</repeatable>
+            <label>Último Nome</label>
+            <input-type>onebox</input-type>
+            <hint>Informe o último nome do autor. Exemplo: Silva</hint>
+            <required></required>
+        </field>
+
+        <field>
+            <dc-schema>dc</dc-schema>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>firstName</dc-qualifier>
+            <repeatable>false</repeatable>
+            <label>Primeiro Nome</label>
+            <input-type>onebox</input-type>
+            <hint>Informe o primeiro nome do autor. Exemplo: João Gomes da</hint>
+            <required></required>
+        </field>
+    </row>
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
