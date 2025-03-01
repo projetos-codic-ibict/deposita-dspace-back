@@ -7,6 +7,7 @@
  */
 package org.dspace.content;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -370,6 +371,15 @@ public class Item extends DSpaceObject implements DSpaceObjectLegacySupport {
     @Override
     public String getName() {
         return getItemService().getMetadataFirstValue(this, MetadataSchemaEnum.DC.getName(), "title", null, Item.ANY);
+    }
+
+    public void updateMetadadosComputados(Context context) throws SQLException {
+        String firstName = itemService.getMetadataFirstValue(this, "dc", "contributor", "firstName", "pt_BR");
+        String lastName = itemService.getMetadataFirstValue(this, "dc", "contributor", "lastName", "pt_BR");
+        String fullName = firstName + " " + lastName;
+
+        itemService.clearMetadata(context, this, "dc", "contributor", "fullName", "pt_BR");
+        itemService.addMetadata(context, this, "dc", "contributor", "fullName", "pt_BR", fullName);
     }
 
     @Override

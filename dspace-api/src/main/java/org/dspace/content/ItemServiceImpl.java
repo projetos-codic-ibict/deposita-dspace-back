@@ -636,6 +636,9 @@ public class ItemServiceImpl extends DSpaceObjectServiceImpl<Item> implements It
         log.info(LogHelper.getHeader(context, "update_item", "item_id="
             + item.getID()));
 
+
+        item.updateMetadadosComputados(context);
+
         super.update(context, item);
 
         // Set sequence IDs for bitstreams in Item. To guarantee uniqueness,
