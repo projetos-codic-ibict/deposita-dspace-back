@@ -28,24 +28,15 @@
         <field>
             <dc-schema>dc</dc-schema>
             <dc-element>contributor</dc-element>
-            <dc-qualifier>lastName</dc-qualifier>
-            <repeatable>false</repeatable>
-            <label>Último Nome</label>
-            <input-type>onebox</input-type>
-            <hint>Informe o último nome do autor. Exemplo: Silva</hint>
+            <dc-qualifier>author</dc-qualifier>
+            <repeatable>true</repeatable>
+            <label>Nome completo</label>
+            <input-type>name</input-type>
+            <hint>Informe o nome completo do autor</hint>
             <required></required>
         </field>
 
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>contributor</dc-element>
-            <dc-qualifier>firstName</dc-qualifier>
-            <repeatable>false</repeatable>
-            <label>Primeiro Nome</label>
-            <input-type>onebox</input-type>
-            <hint>Informe o primeiro nome do autor. Exemplo: João Gomes da</hint>
-            <required></required>
-        </field>
+       
     </row>
 
     <!-- Identificador Lattes do Autor -->
@@ -315,22 +306,11 @@
         <field>
             <dc-schema>dc</dc-schema>
             <dc-element>contributor</dc-element>
-            <dc-qualifier>lastName</dc-qualifier>
-            <repeatable>false</repeatable>
-            <label>Último Nome</label>
-            <input-type>onebox</input-type>
-            <hint>Informe o último nome do autor. Exemplo: Silva</hint>
-            <required></required>
-        </field>
-
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>contributor</dc-element>
-            <dc-qualifier>firstName</dc-qualifier>
-            <repeatable>false</repeatable>
-            <label>Primeiro Nome</label>
-            <input-type>onebox</input-type>
-            <hint>Informe o primeiro nome do autor. Exemplo: João Gomes da</hint>
+            <dc-qualifier>author</dc-qualifier>
+            <repeatable>true</repeatable>
+            <label>Nome completo</label>
+            <input-type>name</input-type>
+            <hint>Informe o nome completo do autor</hint>
             <required></required>
         </field>
     </row>
@@ -678,7 +658,7 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
                     </hint>
                     <required></required>
                 </field>
@@ -843,8 +823,8 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco. Caso não tenha, deixe em branco.
                     </hint>
                     <required></required>
                 </field>
@@ -938,7 +918,7 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                   <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
                     </hint>
                     <required></required>
                 </field>
@@ -1043,8 +1023,8 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco. 
                     </hint>
                     <required></required>
                 </field>
@@ -1138,7 +1118,7 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
                     </hint>
                     <required></required>
                 </field>
@@ -1288,8 +1268,8 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
                     </hint>
                     <required></required>
                 </field>
@@ -1381,7 +1361,8 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1506,8 +1487,9 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.</hint>
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1594,7 +1576,8 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1731,8 +1714,9 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.</hint>
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1819,7 +1803,8 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. Use o botão 'Adicionar'. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
+                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1920,8 +1905,9 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência(s) de fomento*</label>
-                    <input-type value-pairs-name="sponsorship">dropdown</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador.</hint>
+                    <input-type>onebox</input-type>
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
+                    </hint>
                     <required></required>
                 </field>
             </row>
