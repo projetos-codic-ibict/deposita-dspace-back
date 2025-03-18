@@ -43,13 +43,13 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>lattes</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>authorLattes</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Autor</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do autor. O identificador se encontra na página do Currículo Lattes do autor.</hint>
-            <required>false</required>
+            <hint>Informe o identificador Lattes do autor. O identificador se encontra na página do Currículo Lattes do autor.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
+            <required></required>
         </field>
     </row>
 
@@ -57,13 +57,13 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>orcid</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>authorID</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Autor</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do autor. O identificador se encontra na página do Orcid do autor.</hint>
-            <required>false</required>
+            <hint>Informe o identificador Orcid do autor. O identificador se encontra na página do Orcid do autor.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
+            <required></required>
         </field>
     </row>
 
@@ -75,9 +75,9 @@
             <dc-qualifier>advisor</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Orientador(a)*</label>
-            <input-type>onebox</input-type>
+            <input-type>name</input-type>
             <hint>Informe o nome completo do orientador(a). O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes.</hint>
-            <required>true</required>
+            <required></required>
         </field>
     </row>
 
@@ -85,13 +85,13 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>lattes</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>advisorLattes</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Orientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do orientador. O identificador se encontra na página do Currículo Lattes do orientador.</hint>
-            <required>false</required>
+            <hint>Informe o identificador Lattes do orientador. O identificador se encontra na página do Currículo Lattes do orientador.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
+            <required></required>
         </field>
     </row>
 
@@ -99,13 +99,13 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>orcid</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>advisorID</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Orientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do orientador. O identificador se encontra na página do Orcid do orientador.</hint>
-            <required>false</required>
+            <hint>Informe o identificador Orcid do orientador. O identificador se encontra na página do Orcid do orientador.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
+            <required></required>
         </field>
     </row>
 
@@ -117,7 +117,7 @@
             <dc-qualifier>advisor-co1</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Co-orientador(a)</label>
-            <input-type>onebox</input-type>
+            <input-type>name</input-type>
             <hint>Informe o nome completo do co-orientador(a). O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes.</hint>
             <required>false</required>
         </field>
@@ -127,12 +127,12 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>lattes</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>advisor-co1Lattes</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Co-orientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do co-orientador. O identificador se encontra na página do Currículo Lattes do co-orientador.</hint>
+            <hint>Informe o identificador Lattes do co-orientador. O identificador se encontra na página do Currículo Lattes do co-orientador.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
             <required>false</required>
         </field>
     </row>
@@ -141,12 +141,12 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>orcid</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>advisor-co1ID</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Co-orientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do co-orientador. O identificador se encontra na página do Orcid do co-orientador.</hint>
+            <hint>Informe o identificador Orcid do co-orientador. O identificador se encontra na página do Orcid do co-orientador.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
             <required>false</required>
         </field>
     </row>
@@ -159,7 +159,7 @@
             <dc-qualifier>referees1</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Membros da Banca*</label>
-            <input-type>onebox</input-type>
+            <input-type>name</input-type>
             <hint>Informe o nome completo do membro da banca. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes.</hint>
             <required>true</required>
         </field>
@@ -169,13 +169,13 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>lattes</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>referees1Lattes</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Membro da Banca</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do membro da banca. O identificador se encontra na página do Currículo Lattes do membro da banca.</hint>
-            <required>false</required>
+            <hint>Informe o identificador Lattes do membro da banca. O identificador se encontra na página do Currículo Lattes do membro da banca.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
+            <required></required>
         </field>
     </row>
 
@@ -183,13 +183,13 @@
     <row>
         <field>
             <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <dc-qualifier>orcid</dc-qualifier>
+            <dc-element>contributor</dc-element>
+            <dc-qualifier>referees1ID</dc-qualifier>
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Membro da Banca</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do membro da banca. O identificador se encontra na página do Orcid do membro da banca.</hint>
-            <required>false</required>
+            <hint>Informe o identificador Orcid do membro da banca. O identificador se encontra na página do Orcid do membro da banca.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
+            <required></required>
         </field>
     </row>
 </form>
@@ -318,9 +318,9 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>lattes</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>authorLattes</dc-qualifier>
+                    <repeatable>true</repeatable>
                     <label>Identificador Lattes</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o ID lattes do pesquisador. O identificador se encontra na página do Currículo Lattes do pesquisador.
@@ -331,9 +331,9 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>orcid</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>authorID</dc-qualifier>
+                    <repeatable>true</repeatable>
                     <label>Identificador Orcid</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o identificador Orcid do pesquisador. O identificador se encontra na página do Orcid do pesquisador (https://orcid.org/). Caso o pesquisador não possua cadastro no Orcid, recomanda-se a sua realização.</hint>
