@@ -6,13 +6,16 @@
 ##
 #set($subject = "Criação de conta no ${config.get('dspace.name')} ")
 #set($phone = ${config.get('mail.message.helpdesk.telephone')})
-Para completar sua conta no ${config.get('dspace.name')} , por favor, clique no link abaixo:
+Para completar seu registro no Deposita, por favor, clique no link a 
+seguir:
 
   ${params[0]}
 
-Se precisa de ajuda com sua conta, por favor envie um email para ${config.get("mail.helpdesk")}
-#if( $phone )
-or call us at ${phone}.
+Deposita - Repositório Comum do Brasil
+deposita@ibict.br
++55 61 3217-6449
+
+Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT)
+Ministério da Ciência, Tecnologia e Inovação (MCTI)
 #end
 
-Time ${config.get('dspace.name')}
