@@ -401,7 +401,7 @@
                     <dc-qualifier>country</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>País de publicação</label>
-                    <input-type>onebox</input-type>
+                    <input-type value-pairs-name="publisher_countries">dropdown</input-type>
                     <hint>Indique o país de publicação da revista.
                     </hint>
                     <required></required>
@@ -3961,190 +3961,28 @@
         <stored-value>usp</stored-value>
     </pair>
 </value-pairs>
-<value-pairs value-pairs-name="country" dc-term="publisher.country">
-    <pair>
-        <displayed-value>Brasil</displayed-value>
-        <stored-value>brasil</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Afeganistão</displayed-value>
-        <stored-value>afeganistao</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>África do Sul</displayed-value>
-        <stored-value>africa_do_sul</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Albânia</displayed-value>
-        <stored-value>albania</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Alemanha</displayed-value>
-        <stored-value>alemanha</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Andorra</displayed-value>
-        <stored-value>andorra</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Angola</displayed-value>
-        <stored-value>angola</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Antiga e Barbuda</displayed-value>
-        <stored-value>antiga_e_barbuda</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Arábia Saudita</displayed-value>
-        <stored-value>arabia_saudita</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Argélia</displayed-value>
-        <stored-value>argelia</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Argentina</displayed-value>
-        <stored-value>argentina</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Arménia</displayed-value>
-        <stored-value>armenia</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Austrália</displayed-value>
-        <stored-value>australia</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Áustria</displayed-value>
-        <stored-value>austria</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Azerbaijão</displayed-value>
-        <stored-value>azerbaijao</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bahamas</displayed-value>
-        <stored-value>bahamas</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bangladexe</displayed-value>
-        <stored-value>bangladexe</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Barbados</displayed-value>
-        <stored-value>barbados</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Barém</displayed-value>
-        <stored-value>barem</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bélgica</displayed-value>
-        <stored-value>belgica</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Belize</displayed-value>
-        <stored-value>belize</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Benim</displayed-value>
-        <stored-value>benim</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bielorrússia</displayed-value>
-        <stored-value>bielorrussia</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bolívia</displayed-value>
-        <stored-value>bolivia</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bósnia e Herzegovina</displayed-value>
-        <stored-value>bosnia_e_herzegovina</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Botsuana</displayed-value>
-        <stored-value>botsuana</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Brunei</displayed-value>
-        <stored-value>brunei</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Bulgária</displayed-value>
-        <stored-value>bulgaria</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Burquina Faso</displayed-value>
-        <stored-value>burquina_faso</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Burúndi</displayed-value>
-        <stored-value>burundi</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Butão</displayed-value>
-        <stored-value>butao</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Cabo Verde</displayed-value>
-        <stored-value>cabo_verde</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Camarões</displayed-value>
-        <stored-value>camerões</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Camboja</displayed-value>
-        <stored-value>camboja</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Canadá</displayed-value>
-        <stored-value>canada</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Catar</displayed-value>
-        <stored-value>catar</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Cazaquistão</displayed-value>
-        <stored-value>cazaquistao</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Chade</displayed-value>
-        <stored-value>chade</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>Chile</displayed-value>
-        <stored-value>chile</stored-value>
-    </pair>
-    <pair>
-        <displayed-value>China</displayed-value>
-        <stored-value>china</stored-value>
-    </pair>
-    <!-- Continue adicionando os países conforme o mesmo formato -->
-</value-pairs>
+
 
 <value-pairs value-pairs-name="institution-type" dc-term="publisher.juridicnature">
     <pair>
         <displayed-value>Instituição privada</displayed-value>
-        <stored-value>instituicao_privada</stored-value>
+        <stored-value>Instituição privada</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituição pública</displayed-value>
-        <stored-value>instituicao_publica</stored-value>
+        <stored-value>Instituição pública</stored-value>
     </pair>
     <pair>
         <displayed-value>Organização não governamental (ONG)</displayed-value>
-        <stored-value>organizacao_nao_governamental_ong</stored-value>
+        <stored-value>Organização não governamental (ONG)</stored-value>
     </pair>
     <pair>
         <displayed-value>Publicação independente</displayed-value>
-        <stored-value>publicacao_independente</stored-value>
+        <stored-value>Publicação independente</stored-value>
     </pair>
     <pair>
         <displayed-value>Sociedade civil organizada (sindicatos, associações, cooperativas etc.)</displayed-value>
-        <stored-value>sociedade_civil_organizada</stored-value>
+        <stored-value>Sociedade civil organizada (sindicatos, associações, cooperativas etc.)</stored-value>
     </pair>
 </value-pairs>
 
@@ -4598,9 +4436,9 @@
             </pair>
         </value-pairs>
 
-         <value-pairs value-pairs-name="publisher_countries" dc-term="description.country">
-    <pair>
-    <displayed-value>Afeganistão</displayed-value><stored-value>Afeganistão</stored-value></pair>
+ <value-pairs value-pairs-name="publisher_countries" dc-term="description.country">
+    <pair><displayed-value>Brasil</displayed-value><stored-value>Brasil</stored-value></pair>
+    <pair><displayed-value>Afeganistão</displayed-value><stored-value>Afeganistão</stored-value></pair>
     <pair><displayed-value>África do Sul</displayed-value><stored-value>África do Sul</stored-value></pair>
     <pair><displayed-value>Albânia</displayed-value><stored-value>Albânia</stored-value></pair>
     <pair><displayed-value>Alemanha</displayed-value><stored-value>Alemanha</stored-value></pair>
@@ -4610,26 +4448,25 @@
     <pair><displayed-value>Arábia Saudita</displayed-value><stored-value>Arábia Saudita</stored-value></pair>
     <pair><displayed-value>Argélia</displayed-value><stored-value>Argélia</stored-value></pair>
     <pair><displayed-value>Argentina</displayed-value><stored-value>Argentina</stored-value></pair>
-    <pair><displayed-value>Armênia</displayed-value><stored-value>Armênia</stored-value></pair>
+    <pair><displayed-value>Arménia</displayed-value><stored-value>Arménia</stored-value></pair>
     <pair><displayed-value>Austrália</displayed-value><stored-value>Austrália</stored-value></pair>
     <pair><displayed-value>Áustria</displayed-value><stored-value>Áustria</stored-value></pair>
     <pair><displayed-value>Azerbaijão</displayed-value><stored-value>Azerbaijão</stored-value></pair>
     <pair><displayed-value>Bahamas</displayed-value><stored-value>Bahamas</stored-value></pair>
-    <pair><displayed-value>Bangladesh</displayed-value><stored-value>Bangladesh</stored-value></pair>
+    <pair><displayed-value>Bangladexe</displayed-value><stored-value>Bangladexe</stored-value></pair>
     <pair><displayed-value>Barbados</displayed-value><stored-value>Barbados</stored-value></pair>
-    <pair><displayed-value>Bahrein</displayed-value><stored-value>Bahrein</stored-value></pair>
+    <pair><displayed-value>Barém</displayed-value><stored-value>Barém</stored-value></pair>
     <pair><displayed-value>Bélgica</displayed-value><stored-value>Bélgica</stored-value></pair>
     <pair><displayed-value>Belize</displayed-value><stored-value>Belize</stored-value></pair>
-    <pair><displayed-value>Benin</displayed-value><stored-value>Benin</stored-value></pair>
+    <pair><displayed-value>Benim</displayed-value><stored-value>Benim</stored-value></pair>
     <pair><displayed-value>Bielorrússia</displayed-value><stored-value>Bielorrússia</stored-value></pair>
     <pair><displayed-value>Bolívia</displayed-value><stored-value>Bolívia</stored-value></pair>
     <pair><displayed-value>Bósnia e Herzegovina</displayed-value><stored-value>Bósnia e Herzegovina</stored-value></pair>
-    <pair><displayed-value>Botswana</displayed-value><stored-value>Botswana</stored-value></pair>
-    <pair><displayed-value>Brasil</displayed-value><stored-value>Brasil</stored-value></pair>
+    <pair><displayed-value>Botsuana</displayed-value><stored-value>Botsuana</stored-value></pair>
     <pair><displayed-value>Brunei</displayed-value><stored-value>Brunei</stored-value></pair>
     <pair><displayed-value>Bulgária</displayed-value><stored-value>Bulgária</stored-value></pair>
-    <pair><displayed-value>Burkina Faso</displayed-value><stored-value>Burkina Faso</stored-value></pair>
-    <pair><displayed-value>Burundi</displayed-value><stored-value>Burundi</stored-value></pair>
+    <pair><displayed-value>Burquina Faso</displayed-value><stored-value>Burquina Faso</stored-value></pair>
+    <pair><displayed-value>Burúndi</displayed-value><stored-value>Burúndi</stored-value></pair>
     <pair><displayed-value>Butão</displayed-value><stored-value>Butão</stored-value></pair>
     <pair><displayed-value>Cabo Verde</displayed-value><stored-value>Cabo Verde</stored-value></pair>
     <pair><displayed-value>Camarões</displayed-value><stored-value>Camarões</stored-value></pair>
@@ -4644,25 +4481,27 @@
     <pair><displayed-value>Colômbia</displayed-value><stored-value>Colômbia</stored-value></pair>
     <pair><displayed-value>Comores</displayed-value><stored-value>Comores</stored-value></pair>
     <pair><displayed-value>Congo-Brazzaville</displayed-value><stored-value>Congo-Brazzaville</stored-value></pair>
-    <pair><displayed-value>Congo-Kinshasa</displayed-value><stored-value>Congo-Kinshasa</stored-value></pair>
     <pair><displayed-value>Coreia do Norte</displayed-value><stored-value>Coreia do Norte</stored-value></pair>
     <pair><displayed-value>Coreia do Sul</displayed-value><stored-value>Coreia do Sul</stored-value></pair>
+    <pair><displayed-value>Cosovo</displayed-value><stored-value>Cosovo</stored-value></pair>
     <pair><displayed-value>Costa do Marfim</displayed-value><stored-value>Costa do Marfim</stored-value></pair>
     <pair><displayed-value>Costa Rica</displayed-value><stored-value>Costa Rica</stored-value></pair>
     <pair><displayed-value>Croácia</displayed-value><stored-value>Croácia</stored-value></pair>
+    <pair><displayed-value>Cuaite</displayed-value><stored-value>Cuaite</stored-value></pair>
     <pair><displayed-value>Cuba</displayed-value><stored-value>Cuba</stored-value></pair>
     <pair><displayed-value>Dinamarca</displayed-value><stored-value>Dinamarca</stored-value></pair>
     <pair><displayed-value>Dominica</displayed-value><stored-value>Dominica</stored-value></pair>
     <pair><displayed-value>Egito</displayed-value><stored-value>Egito</stored-value></pair>
-    <pair><displayed-value>El Salvador</displayed-value><stored-value>El Salvador</stored-value></pair>
     <pair><displayed-value>Emirados Árabes Unidos</displayed-value><stored-value>Emirados Árabes Unidos</stored-value></pair>
     <pair><displayed-value>Equador</displayed-value><stored-value>Equador</stored-value></pair>
     <pair><displayed-value>Eritreia</displayed-value><stored-value>Eritreia</stored-value></pair>
     <pair><displayed-value>Eslováquia</displayed-value><stored-value>Eslováquia</stored-value></pair>
-    <pair><displayed-value>Eslovênia</displayed-value><stored-value>Eslovênia</stored-value></pair>
+    <pair><displayed-value>Eslovénia</displayed-value><stored-value>Eslovénia</stored-value></pair>
     <pair><displayed-value>Espanha</displayed-value><stored-value>Espanha</stored-value></pair>
+    <pair><displayed-value>Essuatíni</displayed-value><stored-value>Essuatíni</stored-value></pair>
+    <pair><displayed-value>Estado da Palestina</displayed-value><stored-value>Estado da Palestina</stored-value></pair>
     <pair><displayed-value>Estados Unidos</displayed-value><stored-value>Estados Unidos</stored-value></pair>
-    <pair><displayed-value>Estônia</displayed-value><stored-value>Estônia</stored-value></pair>
+    <pair><displayed-value>Estónia</displayed-value><stored-value>Estónia</stored-value></pair>
     <pair><displayed-value>Etiópia</displayed-value><stored-value>Etiópia</stored-value></pair>
     <pair><displayed-value>Fiji</displayed-value><stored-value>Fiji</stored-value></pair>
     <pair><displayed-value>Filipinas</displayed-value><stored-value>Filipinas</stored-value></pair>
@@ -4672,21 +4511,22 @@
     <pair><displayed-value>Gâmbia</displayed-value><stored-value>Gâmbia</stored-value></pair>
     <pair><displayed-value>Gana</displayed-value><stored-value>Gana</stored-value></pair>
     <pair><displayed-value>Geórgia</displayed-value><stored-value>Geórgia</stored-value></pair>
-    <pair><displayed-value>Grécia</displayed-value><stored-value>Grécia</stored-value></pair>
     <pair><displayed-value>Granada</displayed-value><stored-value>Granada</stored-value></pair>
+    <pair><displayed-value>Grécia</displayed-value><stored-value>Grécia</stored-value></pair>
     <pair><displayed-value>Guatemala</displayed-value><stored-value>Guatemala</stored-value></pair>
     <pair><displayed-value>Guiana</displayed-value><stored-value>Guiana</stored-value></pair>
     <pair><displayed-value>Guiné</displayed-value><stored-value>Guiné</stored-value></pair>
-    <pair><displayed-value>Guiné-Bissau</displayed-value><stored-value>Guiné-Bissau</stored-value></pair>
     <pair><displayed-value>Guiné Equatorial</displayed-value><stored-value>Guiné Equatorial</stored-value></pair>
+    <pair><displayed-value>Guiné-Bissau</displayed-value><stored-value>Guiné-Bissau</stored-value></pair>
     <pair><displayed-value>Haiti</displayed-value><stored-value>Haiti</stored-value></pair>
     <pair><displayed-value>Honduras</displayed-value><stored-value>Honduras</stored-value></pair>
     <pair><displayed-value>Hungria</displayed-value><stored-value>Hungria</stored-value></pair>
-    <pair><displayed-value>Iêmen</displayed-value><stored-value>Iêmen</stored-value></pair>
+    <pair><displayed-value>Iémen</displayed-value><stored-value>Iémen</stored-value></pair>
+    <pair><displayed-value>Ilhas Marechal</displayed-value><stored-value>Ilhas Marechal</stored-value></pair>
     <pair><displayed-value>Índia</displayed-value><stored-value>Índia</stored-value></pair>
     <pair><displayed-value>Indonésia</displayed-value><stored-value>Indonésia</stored-value></pair>
     <pair><displayed-value>Irão</displayed-value><stored-value>Irão</stored-value></pair>
-    <pair><displayed-value>Iraque</displayed-value><stored-value>Irague</stored-value></pair>
+    <pair><displayed-value>Iraque</displayed-value><stored-value>Iraque</stored-value></pair>
     <pair><displayed-value>Irlanda</displayed-value><stored-value>Irlanda</stored-value></pair>
     <pair><displayed-value>Islândia</displayed-value><stored-value>Islândia</stored-value></pair>
     <pair><displayed-value>Israel</displayed-value><stored-value>Israel</stored-value></pair>
@@ -4738,7 +4578,7 @@
     <pair><displayed-value>Paquistão</displayed-value><stored-value>Paquistão</stored-value></pair>
     <pair><displayed-value>Paraguai</displayed-value><stored-value>Paraguai</stored-value></pair>
     <pair><displayed-value>Peru</displayed-value><stored-value>Peru</stored-value></pair>
-    <pair><displayed-value>Polónia</displayed-value><stored-value>Polónia</stored-value></pair>
+    <pair><displayed-value>Polônia</displayed-value><stored-value>Polônia</stored-value></pair>
     <pair><displayed-value>Portugal</displayed-value><stored-value>Portugal</stored-value></pair>
     <pair><displayed-value>Quénia</displayed-value><stored-value>Quénia</stored-value></pair>
     <pair><displayed-value>Quirguistão</displayed-value><stored-value>Quirguistão</stored-value></pair>
@@ -4752,6 +4592,248 @@
     <pair><displayed-value>Ruanda</displayed-value><stored-value>Ruanda</stored-value></pair>
     <pair><displayed-value>Rússia</displayed-value><stored-value>Rússia</stored-value></pair>
     <pair><displayed-value>Salomão</displayed-value><stored-value>Salomão</stored-value></pair>
+    <pair><displayed-value>Salvador</displayed-value><stored-value>Salvador</stored-value></pair>
+    <pair><displayed-value>Samoa</displayed-value><stored-value>Samoa</stored-value></pair>
+    <pair><displayed-value>Santa Lúcia</displayed-value><stored-value>Santa Lúcia</stored-value></pair>
+    <pair><displayed-value>São Cristóvão e Neves</displayed-value><stored-value>São Cristóvão e Neves</stored-value></pair>
+    <pair><displayed-value>São Marinho</displayed-value><stored-value>São Marinho</stored-value></pair>
+    <pair><displayed-value>São Tomé e Príncipe</displayed-value><stored-value>São Tomé e Príncipe</stored-value></pair>
+    <pair><displayed-value>São Vicente e Granadinas</displayed-value><stored-value>São Vicente e Granadinas</stored-value></pair>
+    <pair><displayed-value>Seicheles</displayed-value><stored-value>Seicheles</stored-value></pair>
+    <pair><displayed-value>Senegal</displayed-value><stored-value>Senegal</stored-value></pair>
+    <pair><displayed-value>Serra Leoa</displayed-value><stored-value>Serra Leoa</stored-value></pair>
+    <pair><displayed-value>Sérvia</displayed-value><stored-value>Sérvia</stored-value></pair>
+    <pair><displayed-value>Singapura</displayed-value><stored-value>Singapura</stored-value></pair>
+    <pair><displayed-value>Síria</displayed-value><stored-value>Síria</stored-value></pair>
+    <pair><displayed-value>Somália</displayed-value><stored-value>Somália</stored-value></pair>
+    <pair><displayed-value>Sri Lanca</displayed-value><stored-value>Sri Lanca</stored-value></pair>
+    <pair><displayed-value>Sudão</displayed-value><stored-value>Sudão</stored-value></pair>
+    <pair><displayed-value>Sudão do Sul</displayed-value><stored-value>Sudão do Sul</stored-value></pair>
+    <pair><displayed-value>Suécia</displayed-value><stored-value>Suécia</stored-value></pair>
+    <pair><displayed-value>Suíça</displayed-value><stored-value>Suíça</stored-value></pair>
+    <pair><displayed-value>Suriname</displayed-value><stored-value>Suriname</stored-value></pair>
+    <pair><displayed-value>Tailândia</displayed-value><stored-value>Tailândia</stored-value></pair>
+    <pair><displayed-value>Taiuã</displayed-value><stored-value>Taiuã</stored-value></pair>
+    <pair><displayed-value>Tajiquistão</displayed-value><stored-value>Tajiquistão</stored-value></pair>
+    <pair><displayed-value>Tanzânia</displayed-value><stored-value>Tanzânia</stored-value></pair>
+    <pair><displayed-value>Timor-Leste</displayed-value><stored-value>Timor-Leste</stored-value></pair>
+    <pair><displayed-value>Togo</displayed-value><stored-value>Togo</stored-value></pair>
+    <pair><displayed-value>Tonga</displayed-value><stored-value>Tonga</stored-value></pair>
+    <pair><displayed-value>Trindade e Tobago</displayed-value><stored-value>Trindade e Tobago</stored-value></pair>
+    <pair><displayed-value>Tunísia</displayed-value><stored-value>Tunísia</stored-value></pair>
+    <pair><displayed-value>Turcomenistão</displayed-value><stored-value>Turcomenistão</stored-value></pair>
+    <pair><displayed-value>Turquia</displayed-value><stored-value>Turquia</stored-value></pair>
+    <pair><displayed-value>Tuvalu</displayed-value><stored-value>Tuvalu</stored-value></pair>
+    <pair><displayed-value>Ucrânia</displayed-value><stored-value>Ucrânia</stored-value></pair>
+    <pair><displayed-value>Uganda</displayed-value><stored-value>Uganda</stored-value></pair>
+    <pair><displayed-value>Uruguai</displayed-value><stored-value>Uruguai</stored-value></pair>
+    <pair><displayed-value>Usbequistão</displayed-value><stored-value>Usbequistão</stored-value></pair>
+    <pair><displayed-value>Vanuatu</displayed-value><stored-value>Vanuatu</stored-value></pair>
+    <pair><displayed-value>Vaticano</displayed-value><stored-value>Vaticano</stored-value></pair>
+    <pair><displayed-value>Venezuela</displayed-value><stored-value>Venezuela</stored-value></pair>
+    <pair><displayed-value>Vietname</displayed-value><stored-value>Vietname</stored-value></pair>
+    <pair><displayed-value>Zâmbia</displayed-value><stored-value>Zâmbia</stored-value></pair>
+    <pair><displayed-value>Zimbábue</displayed-value><stored-value>Zimbábue</stored-value></pair>
+</value-pairs>
+
+<value-pairs value-pairs-name="publisher_countries" dc-term="publisher.country">
+    <pair><displayed-value>Brasil</displayed-value><stored-value>Brasil</stored-value></pair>
+    <pair><displayed-value>Afeganistão</displayed-value><stored-value>Afeganistão</stored-value></pair>
+    <pair><displayed-value>África do Sul</displayed-value><stored-value>África do Sul</stored-value></pair>
+    <pair><displayed-value>Albânia</displayed-value><stored-value>Albânia</stored-value></pair>
+    <pair><displayed-value>Alemanha</displayed-value><stored-value>Alemanha</stored-value></pair>
+    <pair><displayed-value>Andorra</displayed-value><stored-value>Andorra</stored-value></pair>
+    <pair><displayed-value>Angola</displayed-value><stored-value>Angola</stored-value></pair>
+    <pair><displayed-value>Antiga e Barbuda</displayed-value><stored-value>Antiga e Barbuda</stored-value></pair>
+    <pair><displayed-value>Arábia Saudita</displayed-value><stored-value>Arábia Saudita</stored-value></pair>
+    <pair><displayed-value>Argélia</displayed-value><stored-value>Argélia</stored-value></pair>
+    <pair><displayed-value>Argentina</displayed-value><stored-value>Argentina</stored-value></pair>
+    <pair><displayed-value>Arménia</displayed-value><stored-value>Arménia</stored-value></pair>
+    <pair><displayed-value>Austrália</displayed-value><stored-value>Austrália</stored-value></pair>
+    <pair><displayed-value>Áustria</displayed-value><stored-value>Áustria</stored-value></pair>
+    <pair><displayed-value>Azerbaijão</displayed-value><stored-value>Azerbaijão</stored-value></pair>
+    <pair><displayed-value>Bahamas</displayed-value><stored-value>Bahamas</stored-value></pair>
+    <pair><displayed-value>Bangladexe</displayed-value><stored-value>Bangladexe</stored-value></pair>
+    <pair><displayed-value>Barbados</displayed-value><stored-value>Barbados</stored-value></pair>
+    <pair><displayed-value>Barém</displayed-value><stored-value>Barém</stored-value></pair>
+    <pair><displayed-value>Bélgica</displayed-value><stored-value>Bélgica</stored-value></pair>
+    <pair><displayed-value>Belize</displayed-value><stored-value>Belize</stored-value></pair>
+    <pair><displayed-value>Benim</displayed-value><stored-value>Benim</stored-value></pair>
+    <pair><displayed-value>Bielorrússia</displayed-value><stored-value>Bielorrússia</stored-value></pair>
+    <pair><displayed-value>Bolívia</displayed-value><stored-value>Bolívia</stored-value></pair>
+    <pair><displayed-value>Bósnia e Herzegovina</displayed-value><stored-value>Bósnia e Herzegovina</stored-value></pair>
+    <pair><displayed-value>Botsuana</displayed-value><stored-value>Botsuana</stored-value></pair>
+    <pair><displayed-value>Brunei</displayed-value><stored-value>Brunei</stored-value></pair>
+    <pair><displayed-value>Bulgária</displayed-value><stored-value>Bulgária</stored-value></pair>
+    <pair><displayed-value>Burquina Faso</displayed-value><stored-value>Burquina Faso</stored-value></pair>
+    <pair><displayed-value>Burúndi</displayed-value><stored-value>Burúndi</stored-value></pair>
+    <pair><displayed-value>Butão</displayed-value><stored-value>Butão</stored-value></pair>
+    <pair><displayed-value>Cabo Verde</displayed-value><stored-value>Cabo Verde</stored-value></pair>
+    <pair><displayed-value>Camarões</displayed-value><stored-value>Camarões</stored-value></pair>
+    <pair><displayed-value>Camboja</displayed-value><stored-value>Camboja</stored-value></pair>
+    <pair><displayed-value>Canadá</displayed-value><stored-value>Canadá</stored-value></pair>
+    <pair><displayed-value>Catar</displayed-value><stored-value>Catar</stored-value></pair>
+    <pair><displayed-value>Cazaquistão</displayed-value><stored-value>Cazaquistão</stored-value></pair>
+    <pair><displayed-value>Chade</displayed-value><stored-value>Chade</stored-value></pair>
+    <pair><displayed-value>Chile</displayed-value><stored-value>Chile</stored-value></pair>
+    <pair><displayed-value>China</displayed-value><stored-value>China</stored-value></pair>
+    <pair><displayed-value>Chipre</displayed-value><stored-value>Chipre</stored-value></pair>
+    <pair><displayed-value>Colômbia</displayed-value><stored-value>Colômbia</stored-value></pair>
+    <pair><displayed-value>Comores</displayed-value><stored-value>Comores</stored-value></pair>
+    <pair><displayed-value>Congo-Brazzaville</displayed-value><stored-value>Congo-Brazzaville</stored-value></pair>
+    <pair><displayed-value>Coreia do Norte</displayed-value><stored-value>Coreia do Norte</stored-value></pair>
+    <pair><displayed-value>Coreia do Sul</displayed-value><stored-value>Coreia do Sul</stored-value></pair>
+    <pair><displayed-value>Cosovo</displayed-value><stored-value>Cosovo</stored-value></pair>
+    <pair><displayed-value>Costa do Marfim</displayed-value><stored-value>Costa do Marfim</stored-value></pair>
+    <pair><displayed-value>Costa Rica</displayed-value><stored-value>Costa Rica</stored-value></pair>
+    <pair><displayed-value>Croácia</displayed-value><stored-value>Croácia</stored-value></pair>
+    <pair><displayed-value>Cuaite</displayed-value><stored-value>Cuaite</stored-value></pair>
+    <pair><displayed-value>Cuba</displayed-value><stored-value>Cuba</stored-value></pair>
+    <pair><displayed-value>Dinamarca</displayed-value><stored-value>Dinamarca</stored-value></pair>
+    <pair><displayed-value>Dominica</displayed-value><stored-value>Dominica</stored-value></pair>
+    <pair><displayed-value>Egito</displayed-value><stored-value>Egito</stored-value></pair>
+    <pair><displayed-value>Emirados Árabes Unidos</displayed-value><stored-value>Emirados Árabes Unidos</stored-value></pair>
+    <pair><displayed-value>Equador</displayed-value><stored-value>Equador</stored-value></pair>
+    <pair><displayed-value>Eritreia</displayed-value><stored-value>Eritreia</stored-value></pair>
+    <pair><displayed-value>Eslováquia</displayed-value><stored-value>Eslováquia</stored-value></pair>
+    <pair><displayed-value>Eslovénia</displayed-value><stored-value>Eslovénia</stored-value></pair>
+    <pair><displayed-value>Espanha</displayed-value><stored-value>Espanha</stored-value></pair>
+    <pair><displayed-value>Essuatíni</displayed-value><stored-value>Essuatíni</stored-value></pair>
+    <pair><displayed-value>Estado da Palestina</displayed-value><stored-value>Estado da Palestina</stored-value></pair>
+    <pair><displayed-value>Estados Unidos</displayed-value><stored-value>Estados Unidos</stored-value></pair>
+    <pair><displayed-value>Estónia</displayed-value><stored-value>Estónia</stored-value></pair>
+    <pair><displayed-value>Etiópia</displayed-value><stored-value>Etiópia</stored-value></pair>
+    <pair><displayed-value>Fiji</displayed-value><stored-value>Fiji</stored-value></pair>
+    <pair><displayed-value>Filipinas</displayed-value><stored-value>Filipinas</stored-value></pair>
+    <pair><displayed-value>Finlândia</displayed-value><stored-value>Finlândia</stored-value></pair>
+    <pair><displayed-value>França</displayed-value><stored-value>França</stored-value></pair>
+    <pair><displayed-value>Gabão</displayed-value><stored-value>Gabão</stored-value></pair>
+    <pair><displayed-value>Gâmbia</displayed-value><stored-value>Gâmbia</stored-value></pair>
+    <pair><displayed-value>Gana</displayed-value><stored-value>Gana</stored-value></pair>
+    <pair><displayed-value>Geórgia</displayed-value><stored-value>Geórgia</stored-value></pair>
+    <pair><displayed-value>Granada</displayed-value><stored-value>Granada</stored-value></pair>
+    <pair><displayed-value>Grécia</displayed-value><stored-value>Grécia</stored-value></pair>
+    <pair><displayed-value>Guatemala</displayed-value><stored-value>Guatemala</stored-value></pair>
+    <pair><displayed-value>Guiana</displayed-value><stored-value>Guiana</stored-value></pair>
+    <pair><displayed-value>Guiné</displayed-value><stored-value>Guiné</stored-value></pair>
+    <pair><displayed-value>Guiné Equatorial</displayed-value><stored-value>Guiné Equatorial</stored-value></pair>
+    <pair><displayed-value>Guiné-Bissau</displayed-value><stored-value>Guiné-Bissau</stored-value></pair>
+    <pair><displayed-value>Haiti</displayed-value><stored-value>Haiti</stored-value></pair>
+    <pair><displayed-value>Honduras</displayed-value><stored-value>Honduras</stored-value></pair>
+    <pair><displayed-value>Hungria</displayed-value><stored-value>Hungria</stored-value></pair>
+    <pair><displayed-value>Iémen</displayed-value><stored-value>Iémen</stored-value></pair>
+    <pair><displayed-value>Ilhas Marechal</displayed-value><stored-value>Ilhas Marechal</stored-value></pair>
+    <pair><displayed-value>Índia</displayed-value><stored-value>Índia</stored-value></pair>
+    <pair><displayed-value>Indonésia</displayed-value><stored-value>Indonésia</stored-value></pair>
+    <pair><displayed-value>Irão</displayed-value><stored-value>Irão</stored-value></pair>
+    <pair><displayed-value>Iraque</displayed-value><stored-value>Iraque</stored-value></pair>
+    <pair><displayed-value>Irlanda</displayed-value><stored-value>Irlanda</stored-value></pair>
+    <pair><displayed-value>Islândia</displayed-value><stored-value>Islândia</stored-value></pair>
+    <pair><displayed-value>Israel</displayed-value><stored-value>Israel</stored-value></pair>
+    <pair><displayed-value>Itália</displayed-value><stored-value>Itália</stored-value></pair>
+    <pair><displayed-value>Jamaica</displayed-value><stored-value>Jamaica</stored-value></pair>
+    <pair><displayed-value>Japão</displayed-value><stored-value>Japão</stored-value></pair>
+    <pair><displayed-value>Jibuti</displayed-value><stored-value>Jibuti</stored-value></pair>
+    <pair><displayed-value>Jordânia</displayed-value><stored-value>Jordânia</stored-value></pair>
+    <pair><displayed-value>Laus</displayed-value><stored-value>Laus</stored-value></pair>
+    <pair><displayed-value>Lesoto</displayed-value><stored-value>Lesoto</stored-value></pair>
+    <pair><displayed-value>Letónia</displayed-value><stored-value>Letónia</stored-value></pair>
+    <pair><displayed-value>Líbano</displayed-value><stored-value>Líbano</stored-value></pair>
+    <pair><displayed-value>Libéria</displayed-value><stored-value>Libéria</stored-value></pair>
+    <pair><displayed-value>Líbia</displayed-value><stored-value>Líbia</stored-value></pair>
+    <pair><displayed-value>Listenstaine</displayed-value><stored-value>Listenstaine</stored-value></pair>
+    <pair><displayed-value>Lituânia</displayed-value><stored-value>Lituânia</stored-value></pair>
+    <pair><displayed-value>Luxemburgo</displayed-value><stored-value>Luxemburgo</stored-value></pair>
+    <pair><displayed-value>Macedónia do Norte</displayed-value><stored-value>Macedónia do Norte</stored-value></pair>
+    <pair><displayed-value>Madagáscar</displayed-value><stored-value>Madagáscar</stored-value></pair>
+    <pair><displayed-value>Malásia</displayed-value><stored-value>Malásia</stored-value></pair>
+    <pair><displayed-value>Maláui</displayed-value><stored-value>Maláui</stored-value></pair>
+    <pair><displayed-value>Maldivas</displayed-value><stored-value>Maldivas</stored-value></pair>
+    <pair><displayed-value>Mali</displayed-value><stored-value>Mali</stored-value></pair>
+    <pair><displayed-value>Malta</displayed-value><stored-value>Malta</stored-value></pair>
+    <pair><displayed-value>Marrocos</displayed-value><stored-value>Marrocos</stored-value></pair>
+    <pair><displayed-value>Maurícia</displayed-value><stored-value>Maurícia</stored-value></pair>
+    <pair><displayed-value>Mauritânia</displayed-value><stored-value>Mauritânia</stored-value></pair>
+    <pair><displayed-value>México</displayed-value><stored-value>México</stored-value></pair>
+    <pair><displayed-value>Mianmar</displayed-value><stored-value>Mianmar</stored-value></pair>
+    <pair><displayed-value>Micronésia</displayed-value><stored-value>Micronésia</stored-value></pair>
+    <pair><displayed-value>Moçambique</displayed-value><stored-value>Moçambique</stored-value></pair>
+    <pair><displayed-value>Moldávia</displayed-value><stored-value>Moldávia</stored-value></pair>
+    <pair><displayed-value>Mónaco</displayed-value><stored-value>Mónaco</stored-value></pair>
+    <pair><displayed-value>Mongólia</displayed-value><stored-value>Mongólia</stored-value></pair>
+    <pair><displayed-value>Montenegro</displayed-value><stored-value>Montenegro</stored-value></pair>
+    <pair><displayed-value>Namíbia</displayed-value><stored-value>Namíbia</stored-value></pair>
+    <pair><displayed-value>Nauru</displayed-value><stored-value>Nauru</stored-value></pair>
+    <pair><displayed-value>Nepal</displayed-value><stored-value>Nepal</stored-value></pair>
+    <pair><displayed-value>Nicarágua</displayed-value><stored-value>Nicarágua</stored-value></pair>
+    <pair><displayed-value>Níger</displayed-value><stored-value>Níger</stored-value></pair>
+    <pair><displayed-value>Nigéria</displayed-value><stored-value>Nigéria</stored-value></pair>
+    <pair><displayed-value>Noruega</displayed-value><stored-value>Noruega</stored-value></pair>
+    <pair><displayed-value>Nova Zelândia</displayed-value><stored-value>Nova Zelândia</stored-value></pair>
+    <pair><displayed-value>Omã</displayed-value><stored-value>Omã</stored-value></pair>
+    <pair><displayed-value>Países Baixos</displayed-value><stored-value>Países Baixos</stored-value></pair>
+    <pair><displayed-value>Palau</displayed-value><stored-value>Palau</stored-value></pair>
+    <pair><displayed-value>Panamá</displayed-value><stored-value>Panamá</stored-value></pair>
+    <pair><displayed-value>Papua Nova Guiné</displayed-value><stored-value>Papua Nova Guiné</stored-value></pair>
+    <pair><displayed-value>Paquistão</displayed-value><stored-value>Paquistão</stored-value></pair>
+    <pair><displayed-value>Paraguai</displayed-value><stored-value>Paraguai</stored-value></pair>
+    <pair><displayed-value>Peru</displayed-value><stored-value>Peru</stored-value></pair>
+    <pair><displayed-value>Polônia</displayed-value><stored-value>Polônia</stored-value></pair>
+    <pair><displayed-value>Portugal</displayed-value><stored-value>Portugal</stored-value></pair>
+    <pair><displayed-value>Quénia</displayed-value><stored-value>Quénia</stored-value></pair>
+    <pair><displayed-value>Quirguistão</displayed-value><stored-value>Quirguistão</stored-value></pair>
+    <pair><displayed-value>Quiribáti</displayed-value><stored-value>Quiribáti</stored-value></pair>
+    <pair><displayed-value>Reino Unido</displayed-value><stored-value>Reino Unido</stored-value></pair>
+    <pair><displayed-value>República Centro-Africana</displayed-value><stored-value>República Centro-Africana</stored-value></pair>
+    <pair><displayed-value>República Checa</displayed-value><stored-value>República Checa</stored-value></pair>
+    <pair><displayed-value>República Democrática do Congo</displayed-value><stored-value>República Democrática do Congo</stored-value></pair>
+    <pair><displayed-value>República Dominicana</displayed-value><stored-value>República Dominicana</stored-value></pair>
+    <pair><displayed-value>Roménia</displayed-value><stored-value>Roménia</stored-value></pair>
+    <pair><displayed-value>Ruanda</displayed-value><stored-value>Ruanda</stored-value></pair>
+    <pair><displayed-value>Rússia</displayed-value><stored-value>Rússia</stored-value></pair>
+    <pair><displayed-value>Salomão</displayed-value><stored-value>Salomão</stored-value></pair>
+    <pair><displayed-value>Salvador</displayed-value><stored-value>Salvador</stored-value></pair>
+    <pair><displayed-value>Samoa</displayed-value><stored-value>Samoa</stored-value></pair>
+    <pair><displayed-value>Santa Lúcia</displayed-value><stored-value>Santa Lúcia</stored-value></pair>
+    <pair><displayed-value>São Cristóvão e Neves</displayed-value><stored-value>São Cristóvão e Neves</stored-value></pair>
+    <pair><displayed-value>São Marinho</displayed-value><stored-value>São Marinho</stored-value></pair>
+    <pair><displayed-value>São Tomé e Príncipe</displayed-value><stored-value>São Tomé e Príncipe</stored-value></pair>
+    <pair><displayed-value>São Vicente e Granadinas</displayed-value><stored-value>São Vicente e Granadinas</stored-value></pair>
+    <pair><displayed-value>Seicheles</displayed-value><stored-value>Seicheles</stored-value></pair>
+    <pair><displayed-value>Senegal</displayed-value><stored-value>Senegal</stored-value></pair>
+    <pair><displayed-value>Serra Leoa</displayed-value><stored-value>Serra Leoa</stored-value></pair>
+    <pair><displayed-value>Sérvia</displayed-value><stored-value>Sérvia</stored-value></pair>
+    <pair><displayed-value>Singapura</displayed-value><stored-value>Singapura</stored-value></pair>
+    <pair><displayed-value>Síria</displayed-value><stored-value>Síria</stored-value></pair>
+    <pair><displayed-value>Somália</displayed-value><stored-value>Somália</stored-value></pair>
+    <pair><displayed-value>Sri Lanca</displayed-value><stored-value>Sri Lanca</stored-value></pair>
+    <pair><displayed-value>Sudão</displayed-value><stored-value>Sudão</stored-value></pair>
+    <pair><displayed-value>Sudão do Sul</displayed-value><stored-value>Sudão do Sul</stored-value></pair>
+    <pair><displayed-value>Suécia</displayed-value><stored-value>Suécia</stored-value></pair>
+    <pair><displayed-value>Suíça</displayed-value><stored-value>Suíça</stored-value></pair>
+    <pair><displayed-value>Suriname</displayed-value><stored-value>Suriname</stored-value></pair>
+    <pair><displayed-value>Tailândia</displayed-value><stored-value>Tailândia</stored-value></pair>
+    <pair><displayed-value>Taiuã</displayed-value><stored-value>Taiuã</stored-value></pair>
+    <pair><displayed-value>Tajiquistão</displayed-value><stored-value>Tajiquistão</stored-value></pair>
+    <pair><displayed-value>Tanzânia</displayed-value><stored-value>Tanzânia</stored-value></pair>
+    <pair><displayed-value>Timor-Leste</displayed-value><stored-value>Timor-Leste</stored-value></pair>
+    <pair><displayed-value>Togo</displayed-value><stored-value>Togo</stored-value></pair>
+    <pair><displayed-value>Tonga</displayed-value><stored-value>Tonga</stored-value></pair>
+    <pair><displayed-value>Trindade e Tobago</displayed-value><stored-value>Trindade e Tobago</stored-value></pair>
+    <pair><displayed-value>Tunísia</displayed-value><stored-value>Tunísia</stored-value></pair>
+    <pair><displayed-value>Turcomenistão</displayed-value><stored-value>Turcomenistão</stored-value></pair>
+    <pair><displayed-value>Turquia</displayed-value><stored-value>Turquia</stored-value></pair>
+    <pair><displayed-value>Tuvalu</displayed-value><stored-value>Tuvalu</stored-value></pair>
+    <pair><displayed-value>Ucrânia</displayed-value><stored-value>Ucrânia</stored-value></pair>
+    <pair><displayed-value>Uganda</displayed-value><stored-value>Uganda</stored-value></pair>
+    <pair><displayed-value>Uruguai</displayed-value><stored-value>Uruguai</stored-value></pair>
+    <pair><displayed-value>Usbequistão</displayed-value><stored-value>Usbequistão</stored-value></pair>
+    <pair><displayed-value>Vanuatu</displayed-value><stored-value>Vanuatu</stored-value></pair>
+    <pair><displayed-value>Vaticano</displayed-value><stored-value>Vaticano</stored-value></pair>
+    <pair><displayed-value>Venezuela</displayed-value><stored-value>Venezuela</stored-value></pair>
+    <pair><displayed-value>Vietname</displayed-value><stored-value>Vietname</stored-value></pair>
+    <pair><displayed-value>Zâmbia</displayed-value><stored-value>Zâmbia</stored-value></pair>
+    <pair><displayed-value>Zimbábue</displayed-value><stored-value>Zimbábue</stored-value></pair>
 </value-pairs>
 
 
