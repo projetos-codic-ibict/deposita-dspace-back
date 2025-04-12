@@ -30,9 +30,9 @@
             <dc-element>contributor</dc-element>
             <dc-qualifier>author</dc-qualifier>
             <repeatable>true</repeatable>
-            <label>Nome completo</label>
+            <label>Nome completo*</label>
             <input-type>name</input-type>
-            <hint>Informe o nome completo do autor</hint>
+            <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.</hint>
             <required></required>
         </field>
 
@@ -62,7 +62,8 @@
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Autor</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do autor. O identificador se encontra na página do Orcid do autor.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
+            <hint>Informe o identificador Orcid do pesquisador. Caso o pesquisador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/.
+            </hint>
             <required></required>
         </field>
     </row>
@@ -201,7 +202,7 @@
                     <dc-element>publisher</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Nome da instituição</label>
+                    <label>Nome da instituição*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o nome completo, por extenso, da instituição seguido pela sigla entre parênteses. Exemplo de preenchimento: Universidade de Brasília (UnB).
                     </hint>
@@ -292,7 +293,7 @@
                     <dc-element>publisher</dc-element>
                     <dc-qualifier>country</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>País da instituição</label>
+                    <label>País da instituição*</label>
                     <input-type value-pairs-name="publisher_countries">dropdown</input-type>
                     <hint>Indique o país de origem da instituição.
                     </hint>
@@ -308,9 +309,9 @@
             <dc-element>contributor</dc-element>
             <dc-qualifier>author</dc-qualifier>
             <repeatable>true</repeatable>
-            <label>Nome completo</label>
+            <label>Nome completo*</label>
             <input-type>name</input-type>
-            <hint>Informe o nome completo do autor</hint>
+            <hint>Informe o nome completo do pesquisador. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes. Exemplo: João Gomes da Silva = Silva, João Gomes da.</hint>
             <required></required>
         </field>
     </row>
@@ -336,7 +337,8 @@
                     <repeatable>true</repeatable>
                     <label>Identificador Orcid</label>
                     <input-type>onebox</input-type>
-                    <hint>Informe o identificador Orcid do pesquisador. O identificador se encontra na página do Orcid do pesquisador (https://orcid.org/). Caso o pesquisador não possua cadastro no Orcid, recomanda-se a sua realização.</hint>
+                    <hint>Informe o identificador Orcid do pesquisador. Caso o pesquisador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -591,7 +593,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Título</label>
+                    <label>Título*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título conforme o documento original. O campo deve ser preenchido com caixa baixa, exceto siglas e nomes próprios. Exemplo: A história de João da Silva em Brasília-DF.
                     </hint>
@@ -617,7 +619,7 @@
                     <dc-element>language</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Idioma de publicação</label>
+                    <label>Idioma de publicação*</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
                     <hint>Selecione o idioma original do documento.
                     </hint>
@@ -630,7 +632,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>resumo</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Resumo</label>
+                    <label>Resumo*</label>
                     <input-type>textarea</input-type>
                     <hint>Informe o resumo conforme o documento original.
                     </hint>
@@ -656,9 +658,9 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Palavras-chave</label>
+                    <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
+                    <hint>Informe as palavras-chave do documento descrito. Tecle enter para inserir individualmente as palavras. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. Ex.: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
                     </hint>
                     <required></required>
                 </field>
@@ -682,7 +684,7 @@
                     <dc-element>knowledgearea</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Área de conhecimento CNPq</label>
+                    <label>Área do conhecimento CNPq*</label>
                     <input-type value-pairs-name="knowledge_area">dropdown</input-type>
                     <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
                     </hint>
@@ -695,7 +697,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Ano de publicação</label>
+                    <label>Ano de publicação*</label>
                     <input-type>date</input-type>
                     <hint>Informe o ano de publicação ou disponibilização do documento.
                     </hint>
@@ -708,7 +710,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>url</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Publicação original</label>
+                    <label>Publicação original*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe a URL  da página de publicação do documento original.
                     </hint>
@@ -793,7 +795,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>reference</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Referência bibliográfica</label>
+                    <label>Referência bibliográfica*</label>
                     <input-type>textarea</input-type>
                     <hint>Informe a referência bibliográfica do documento, conforme as instruções da ABNT/NBR 6023.
                     </hint>
@@ -835,7 +837,7 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença**</label>
+                    <label>Licença*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
                     <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
                     </hint>
@@ -851,7 +853,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Título</label>
+                    <label>Título*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título conforme o documento original. O campo deve ser preenchido com caixa baixa, exceto siglas e nomes próprios. Exemplo: A história de João da Silva em Brasília-DF.
                     </hint>
@@ -877,7 +879,7 @@
                     <dc-element>language</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Idioma de publicação</label>
+                    <label>Idioma de publicação*</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
                     <hint>Selecione o idioma original do documento.
                     </hint>
@@ -890,7 +892,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>resumo</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Resumo</label>
+                    <label>Resumo*</label>
                     <input-type>textarea</input-type>
                     <hint>Informe o resumo conforme o documento original.
                     </hint>
@@ -916,10 +918,9 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Palavras-chave</label>
+                    <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                   <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
-                    </hint>
+                    <hint>Informe as palavras-chave do documento descrito. Tecle enter para inserir individualmente as palavras. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. Ex.: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
                     <required></required>
                 </field>
             </row>
@@ -942,7 +943,7 @@
                     <dc-element>knowledgearea</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Área de conhecimento CNPq</label>
+                    <label>Área do conhecimento CNPq*</label>
                     <input-type value-pairs-name="knowledge_area">dropdown</input-type>
                     <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
                     </hint>
@@ -955,7 +956,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Ano de publicação</label>
+                    <label>Ano de publicação*</label>
                     <input-type>date</input-type>
                     <hint>Informe o ano de publicação ou disponibilização do documento.
                     </hint>
@@ -1035,7 +1036,7 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença**</label>
+                    <label>Licença*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
                     <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
                     </hint>
@@ -1051,7 +1052,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Título</label>
+                    <label>Título*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título conforme o documento original. O campo deve ser preenchido com caixa baixa, exceto siglas e nomes próprios. Exemplo: A história de João da Silva em Brasília-DF.
                     </hint>
@@ -1077,7 +1078,7 @@
                     <dc-element>language</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Idioma de publicação</label>
+                    <label>Idioma de publicação*</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
                     <hint>Selecione o idioma original do documento.
                     </hint>
@@ -1090,7 +1091,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>resumo</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Resumo</label>
+                    <label>Resumo*</label>
                     <input-type>textarea</input-type>
                     <hint>Informe o resumo conforme o documento original.
                     </hint>
@@ -1116,10 +1117,9 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Palavras-chave</label>
+                    <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
-                    </hint>
+                    <hint>Informe as palavras-chave do documento descrito. Tecle enter para inserir individualmente as palavras. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. Ex.: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1142,7 +1142,7 @@
                     <dc-element>knowledgearea</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Área de conhecimento CNPq</label>
+                    <label>Área do conhecimento CNPq*</label>
                     <input-type value-pairs-name="knowledge_area">dropdown</input-type>
                     <hint>Selecione a área do conhecimento correspondente de acordo com as grandes áreas do CNPq.
                     </hint>
@@ -1155,7 +1155,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Ano de publicação</label>
+                    <label>Ano de publicação*</label>
                     <input-type>date</input-type>
                     <hint>Informe o ano de publicação ou disponibilização do documento.
                     </hint>
@@ -1168,7 +1168,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>isbn</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>ISBN</label>
+                    <label>ISBN*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o número de ISBN do livro.
                     </hint>
@@ -1194,7 +1194,7 @@
                     <dc-element>citation</dc-element>
                     <dc-qualifier>issue</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Título da coleção</label>
+                    <label>Título da coleção*</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título da coleção.
                     </hint>
@@ -1238,7 +1238,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>reference</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Referência bibliográfica</label>
+                    <label>Referência bibliográfica*</label>
                     <input-type>textarea</input-type>
                     <hint>Informe a referência bibliográfica do documento, conforme as instruções da ABNT/NBR 6023.
                     </hint>
@@ -1280,7 +1280,7 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença**</label>
+                    <label>Licença*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
                     <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
                     </hint>
@@ -1361,8 +1361,7 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
-                    </hint>
+                    <hint>Informe as palavras-chave do documento descrito. Tecle enter para inserir individualmente as palavras. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. Ex.: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1576,8 +1575,7 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
-                    </hint>
+                    <hint>Informe as palavras-chave do documento descrito. Tecle enter para inserir individualmente as palavras. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. Ex.: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1803,8 +1801,7 @@
                     <repeatable>true</repeatable>
                     <label>Palavras-chave*</label>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do documento descrito. UMA PARA CADA CAMPO. TECLE ENTER PARA ADICIONAR. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. EX. Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.
-                    </hint>
+                    <hint>Informe as palavras-chave do documento descrito. Tecle enter para inserir individualmente as palavras. Devem ser indicadas no mínimo 3 e no máximo 5 palavras-chave por idioma. Ex.: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.  Sugere-se também o uso de termos em inglês.</hint>
                     <required></required>
                 </field>
             </row>
