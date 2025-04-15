@@ -292,7 +292,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>publisher</dc-element>
                     <dc-qualifier>country</dc-qualifier>
-                    <repeatable>true</repeatable>
+                    <repeatable>false</repeatable>
                     <label>País da instituição*</label>
                     <input-type value-pairs-name="publisher_countries">dropdown</input-type>
                     <hint>Indique o país de origem da instituição.
