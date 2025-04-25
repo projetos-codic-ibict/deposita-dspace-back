@@ -48,7 +48,7 @@
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Autor</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do autor. O identificador se encontra na página do Currículo Lattes do autor.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
+            <hint>Informe o ID lattes do pesquisador. Exemplo: http://lattes.cnpq.br/XXXXXXXXXXXXXXXX. O identificador se encontra na página do Currículo Lattes do pesquisador.</hint>
             <required></required>
         </field>
     </row>
@@ -62,7 +62,7 @@
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Autor</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do pesquisador. Caso o pesquisador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/.
+            <hint>Informe o identificador Orcid do pesquisador. Exemplo: http://orcid.org/XXXX-XXXX-XXXX-XXXX. Caso o pesquisador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/
             </hint>
             <required></required>
         </field>
@@ -91,7 +91,7 @@
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Orientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do orientador. O identificador se encontra na página do Currículo Lattes do orientador.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
+            <hint>Informe o ID lattes do orientador. Exemplo: http://lattes.cnpq.br/XXXXXXXXXXXXXXXX. O identificador se encontra na página do Currículo Lattes do orientador.</hint>
             <required></required>
         </field>
     </row>
@@ -105,7 +105,7 @@
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Orientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do orientador. O identificador se encontra na página do Orcid do orientador.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
+            <hint>Informe o identificador Orcid do orientador. Exemplo: http://orcid.org/XXXX-XXXX-XXXX-XXXX. Caso o orientador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/</hint>
             <required></required>
         </field>
     </row>
@@ -117,10 +117,10 @@
             <dc-element>contributor</dc-element>
             <dc-qualifier>advisor-co1</dc-qualifier>
             <repeatable>true</repeatable>
-            <label>Co-orientador(a)</label>
+            <label>Coorientador(a)</label>
             <input-type>name</input-type>
-            <hint>Informe o nome completo do co-orientador(a). O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes.</hint>
-            <required>false</required>
+            <hint>Informe o nome completo do coorientador(a). O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes.</hint>
+            <required></required>
         </field>
     </row>
 
@@ -131,10 +131,10 @@
             <dc-element>contributor</dc-element>
             <dc-qualifier>advisor-co1Lattes</dc-qualifier>
             <repeatable>true</repeatable>
-            <label>Identificador Lattes do Co-orientador</label>
+            <label>Identificador Lattes do Coorientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do co-orientador. O identificador se encontra na página do Currículo Lattes do co-orientador.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
-            <required>false</required>
+            <hint>Informe o ID lattes do coorientador. Exemplo: http://lattes.cnpq.br/XXXXXXXXXXXXXXXX. O identificador se encontra na página do Currículo Lattes do coorientador.</hint>
+            <required></required>
         </field>
     </row>
 
@@ -145,10 +145,10 @@
             <dc-element>contributor</dc-element>
             <dc-qualifier>advisor-co1ID</dc-qualifier>
             <repeatable>true</repeatable>
-            <label>Identificador Orcid do Co-orientador</label>
+            <label>Identificador Orcid do Coorientador</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do co-orientador. O identificador se encontra na página do Orcid do co-orientador.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
-            <required>false</required>
+            <hint>Informe o identificador Orcid do coorientador. Exemplo: http://orcid.org/XXXX-XXXX-XXXX-XXXX. Caso o coorientador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/</hint>
+            <required></required>
         </field>
     </row>
 
@@ -159,10 +159,10 @@
             <dc-element>contributor</dc-element>
             <dc-qualifier>referees1</dc-qualifier>
             <repeatable>true</repeatable>
-            <label>Membros da Banca*</label>
+            <label>Membro da Banca</label>
             <input-type>name</input-type>
             <hint>Informe o nome completo do membro da banca. O campo deve ser preenchido em ordem de citação e de acordo com o que foi informado no Currículo Lattes.</hint>
-            <required>true</required>
+            <required></required>
         </field>
     </row>
 
@@ -175,7 +175,7 @@
             <repeatable>true</repeatable>
             <label>Identificador Lattes do Membro da Banca</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Lattes do membro da banca. O identificador se encontra na página do Currículo Lattes do membro da banca.(https://lattes.cnpq.br/xxxxxxxxxx e nome pertencente)</hint>
+            <hint>Informe o ID lattes do membro da banca. Exemplo: http://lattes.cnpq.br/XXXXXXXXXXXXXXXX. O identificador se encontra na página do Currículo Lattes do membro da banca.</hint>
             <required></required>
         </field>
     </row>
@@ -189,7 +189,7 @@
             <repeatable>true</repeatable>
             <label>Identificador Orcid do Membro da Banca</label>
             <input-type>onebox</input-type>
-            <hint>Informe o identificador Orcid do membro da banca. O identificador se encontra na página do Orcid do membro da banca.(https://orcid.org/xxxxxxxx-xxxx e nome pertencente)</hint>
+            <hint>Informe o identificador Orcid do membro da banca. Exemplo: http://orcid.org/XXXX-XXXX-XXXX-XXXX. Caso o membro da banca não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/</hint>
             <required></required>
         </field>
     </row>
@@ -324,7 +324,7 @@
                     <repeatable>true</repeatable>
                     <label>Identificador Lattes</label>
                     <input-type>onebox</input-type>
-                    <hint>Informe o ID lattes do pesquisador. O identificador se encontra na página do Currículo Lattes do pesquisador.
+                    <hint>Informe o ID lattes do pesquisador. Exemplo: http://lattes.cnpq.br/XXXXXXXXXXXXXXXX. O identificador se encontra na página do Currículo Lattes do pesquisador.
                     </hint>
                     <required></required>
                 </field>
@@ -337,7 +337,7 @@
                     <repeatable>true</repeatable>
                     <label>Identificador Orcid</label>
                     <input-type>onebox</input-type>
-                    <hint>Informe o identificador Orcid do pesquisador. Caso o pesquisador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/.
+                    <hint>Informe o identificador Orcid do pesquisador. Exemplo: http://orcid.org/XXXX-XXXX-XXXX-XXXX. Caso o pesquisador não possua cadastro no Orcid recomenda-se a sua realização: https://orcid.org/
                     </hint>
                     <required></required>
                 </field>
@@ -606,7 +606,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Título em outro idioma*</label>
+                    <label>Título em outro idioma</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título em outro idioma, preferencialmente o inglês.
                     </hint>
@@ -710,7 +710,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>url</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Publicação original*</label>
+                    <label>Publicação original</label>
                     <input-type>onebox</input-type>
                     <hint>Informe a URL  da página de publicação do documento original.
                     </hint>
@@ -824,9 +824,9 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Agência(s) de fomento*</label>
+                    <label>Agência(s) de fomento</label>
                     <input-type>onebox</input-type>
-                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco. Caso não tenha, deixe em branco.
+                    <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
                     </hint>
                     <required></required>
                 </field>
@@ -866,7 +866,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Título em outro idioma*</label>
+                    <label>Título em outro idioma</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título em outro idioma, preferencialmente o inglês.
                     </hint>
@@ -1023,7 +1023,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Agência(s) de fomento*</label>
+                    <label>Agência(s) de fomento</label>
                     <input-type>onebox</input-type>
                     <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco. 
                     </hint>
@@ -1065,7 +1065,7 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Título em outro idioma*</label>
+                    <label>Título em outro idioma</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título em outro idioma, preferencialmente o inglês.
                     </hint>
@@ -1194,7 +1194,7 @@
                     <dc-element>citation</dc-element>
                     <dc-qualifier>issue</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Título da coleção*</label>
+                    <label>Título da coleção</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o título da coleção.
                     </hint>
@@ -1207,7 +1207,7 @@
                     <dc-element>relation</dc-element>
                     <dc-qualifier>ispartof</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Número do livro na coleção*
+                    <label>Número do livro na coleção
                     </label>
                     <input-type>onebox</input-type>
                     <hint>Informe o número do livro na coleção.
@@ -1238,7 +1238,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>reference</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Referência bibliográfica*</label>
+                    <label>Referência bibliográfica</label>
                     <input-type>textarea</input-type>
                     <hint>Informe a referência bibliográfica do documento, conforme as instruções da ABNT/NBR 6023.
                     </hint>
@@ -1267,7 +1267,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Agência(s) de fomento*</label>
+                    <label>Agência(s) de fomento</label>
                     <input-type>onebox</input-type>
                     <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
                     </hint>
@@ -1485,7 +1485,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Agência(s) de fomento*</label>
+                    <label>Agência(s) de fomento</label>
                     <input-type>onebox</input-type>
                     <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
                     </hint>
@@ -1645,7 +1645,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>url</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Publicação original*</label>
+                    <label>Publicação original</label>
                     <input-type>onebox</input-type>
                     <hint>Informe a URL  da página de publicação do documento original.</hint>
                     <required></required>
@@ -1657,7 +1657,7 @@
                     <dc-element>citation</dc-element>
                     <dc-qualifier>issue</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Número de edição do evento*</label>
+                    <label>Número de edição do evento</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o número de edição do evento.</hint>
                     <required></required>
@@ -1711,7 +1711,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Agência(s) de fomento*</label>
+                    <label>Agência(s) de fomento</label>
                     <input-type>onebox</input-type>
                     <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
                     </hint>
@@ -1901,7 +1901,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Agência(s) de fomento*</label>
+                    <label>Agência(s) de fomento</label>
                     <input-type>onebox</input-type>
                     <hint>Agência(s) de fomento que auxiliou(ram) o pesquisador. Caso não tenha, deixe em branco.
                     </hint>
@@ -3395,10 +3395,6 @@
                 <displayed-value>Multidisciplinar</displayed-value>
                 <stored-value></stored-value>
             </pair>
-            <pair>
-                <displayed-value>Ciências biológicas</displayed-value>
-                <stored-value></stored-value>
-            </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="course_degree" dc-term="publisher.coursedegree">
@@ -3651,11 +3647,7 @@
 
         <value-pairs value-pairs-name="rights" dc-term="rights">
             <pair>
-                <displayed-value>Eu concedo a licença</displayed-value>
-                <stored-value></stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Eu não concedo a licença</displayed-value>
+                <displayed-value>Licença do repositório</displayed-value>
                 <stored-value></stored-value>
             </pair>
         </value-pairs>
