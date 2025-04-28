@@ -397,8 +397,8 @@
             <step id="article2"/>
             <step id="journal"/>
             <step id="article3"/>
-            <step id="upload"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
 
         <submission-process name="bachelorThesis">
@@ -410,8 +410,8 @@
             <step id="course"/>
             <step id="program"/>
             <step id="tese3"/>
-            <step id="upload"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
 
         <submission-process name="book">
@@ -420,9 +420,9 @@
             <step id="book1"/>
             <step id="publisher"/>
             <step id="book2"/>
-            <step id="upload"/>
             <step id="book3"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
 
         <submission-process name="bookPart">
@@ -431,9 +431,9 @@
             <step id="bookPart1"/>
             <step id="publisher"/>
             <step id="bookPart2"/>
-            <step id="upload"/>
             <step id="bookPart3"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
 
         <submission-process name="conferenceObject">
@@ -443,9 +443,9 @@
             <step id="publisher"/>
             <step id="conferenceObject2"/>
             <step id="journal"/>
-            <step id="upload"/>
             <step id="conferenceObject3"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
 
         <submission-process name="doctoralThesis">
@@ -457,8 +457,8 @@
             <step id="course"/>
             <step id="program"/>
             <step id="tese3"/>
-            <step id="upload"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
 
         <submission-process name="masterThesis">
@@ -470,8 +470,8 @@
             <step id="course"/>
             <step id="program"/>
             <step id="tese3"/>
-            <step id="upload"/>
             <step id="license"/>
+            <step id="upload"/>
         </submission-process>
     
 

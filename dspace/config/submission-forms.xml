@@ -3647,7 +3647,11 @@
 
         <value-pairs value-pairs-name="rights" dc-term="rights">
             <pair>
-                <displayed-value>Licença do repositório</displayed-value>
+                <displayed-value>Eu concedo a licença</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Eu não concedo a licença</displayed-value>
                 <stored-value></stored-value>
             </pair>
         </value-pairs>
