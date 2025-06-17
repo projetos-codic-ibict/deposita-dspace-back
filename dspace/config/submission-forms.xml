@@ -215,7 +215,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>publisherurl</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>URL da página da intituição</label>
+                    <label>URL da página da instituição</label>
                     <input-type>onebox</input-type>
                     <hint>Informe a URL da página oficial da instituição.
                     </hint>
@@ -564,7 +564,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>capes</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Identidicador Capes</label>
+                    <label>Identificador Capes</label>
                     <input-type>onebox</input-type>
                     <hint>Informe o indicador único da instituição gerado pela plataforma Sucupira. Faça a busca pela instituição na página: https://sucupira.capes.gov.br/sucupira/public/index.xhtml
                     </hint>
