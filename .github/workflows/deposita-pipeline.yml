@@ -20,16 +20,16 @@ jobs:
           cd /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6 && echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S git pull
           cd /usr/local/dspace/dspace-updater-tool && echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh update-restart-backend.sh
 
-  # PRD:
-  #   runs-on: [self-hosted, linux, x64, prd]
-  #   env:
-  #     ENVIRONMENT: PRD
-  #   environment: 
-  #     name: PRD
-  #     url: 'https://deposita.ibict.br'
-  #   needs: DEV
 
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - run: |
-  #         sh ../../update-restart-backend.sh
+  prod:
+    runs-on: [self-hosted, linux, x64, prod]
+    env:
+      ENVIRONMENT: PROD
+    environment:
+      name: PROD
+      url: 'http://172.16.16.132:8080/server'
+    
+    steps:
+      - run: |
+          cd /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6 && echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S git pull
+          cd /usr/local/dspace/dspace-updater-tool && echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh update-restart-backend.sh
