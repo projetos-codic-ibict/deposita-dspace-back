@@ -4,6 +4,11 @@ target/
 ## Ignore tags index files created by Exuberant Ctags
 tags
 
+javac.*.args
+
+*.patch
+
+
 ## Ignore project files created by Eclipse
 .settings/
 /bin/
