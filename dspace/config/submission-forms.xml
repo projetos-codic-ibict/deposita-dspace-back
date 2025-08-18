@@ -1868,9 +1868,7 @@
                     <required></required>
                 </field>
             </row>
-        </form>
 
-        <form name="tese3">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1895,6 +1893,10 @@
                     <required></required>
                 </field>
             </row>
+        </form>
+
+        <form name="tese3">
+            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
