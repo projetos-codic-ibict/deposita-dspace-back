@@ -1,0 +1,18 @@
+name: Pipeline - Deploy PROD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prod:
+    runs-on: [self-hosted, linux, x64, prod]
+    env:
+      ENVIRONMENT: PROD
+    environment:
+      name: PROD
+      url: 'http://172.16.16.132:8080/server'
+    
+    steps:
+      - run: |
+          cd /usr/local/dspace/dspace-updater-tool/source/DSpace-dspace-7.6 && echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S git pull
+          cd /usr/local/dspace/dspace-updater-tool && echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh update-restart-backend.sh
