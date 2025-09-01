@@ -21,7 +21,20 @@
     <!-- serves as a 'this field is required' flag.                           -->
 
     <form-definitions>
-
+    <form name="dark-identifier-form">
+    <row>
+        <field>
+            <dc-schema>dc</dc-schema>
+            <dc-element>identifier</dc-element>
+            <dc-qualifier>dark</dc-qualifier>
+            <repeatable>false</repeatable>
+            <label>Identificador Dark</label>
+            <input-type>onebox</input-type>
+            <hint>Este campo será preenchido pelos admins</hint>
+            <visibility>workflow</visibility>
+        </field>
+    </row>
+</form>
     <form name="person-fields">
     <!-- Nome Completo do Autor -->
     <row>

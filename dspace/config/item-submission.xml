@@ -97,6 +97,12 @@
     <!-- Messages.properties -->
     <!-- -->
     <step-definitions>
+
+        <step-definition id="dark-identifier-form" mandatory="true">
+            <heading>submit.progressbar.describe.dark-identifier</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
         <step-definition id="publisher" mandatory="true">
             <heading>submit.progressbar.describe.publisher</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -397,6 +403,7 @@
             <step id="article2"/>
             <step id="journal"/>
             <step id="article3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
@@ -410,6 +417,7 @@
             <step id="course"/>
             <step id="program"/>
             <step id="tese3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
@@ -421,6 +429,7 @@
             <step id="publisher"/>
             <step id="book2"/>
             <step id="book3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
@@ -432,6 +441,7 @@
             <step id="publisher"/>
             <step id="bookPart2"/>
             <step id="bookPart3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
@@ -444,6 +454,7 @@
             <step id="conferenceObject2"/>
             <step id="journal"/>
             <step id="conferenceObject3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
@@ -457,6 +468,7 @@
             <step id="course"/>
             <step id="program"/>
             <step id="tese3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
@@ -470,6 +482,7 @@
             <step id="course"/>
             <step id="program"/>
             <step id="tese3"/>
+            <step id="dark-identifier-form"/>
             <step id="license"/>
             <step id="upload"/>
         </submission-process>
