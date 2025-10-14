@@ -272,9 +272,9 @@
             <list>
                 <!--Only
                 find items-->
-                <value>search.resourcetype:Item AND latestVersion:true</value>
-                <!-- <value>(search.resourcetype:Item AND latestVersion:true) OR
-                search.resourcetype:Collection OR search.resourcetype:Community</value> -->
+                <!-- <value>search.resourcetype:Item AND latestVersion:true</value> -->
+                <value>(search.resourcetype:Item AND latestVersion:true) OR
+                search.resourcetype:Collection OR search.resourcetype:Community</value>
                 <value>-withdrawn:true AND -discoverable:false</value>
             </list>
         </property>
@@ -453,9 +453,9 @@
                 <!--Only
                 find items -->
                 <!-- NOTE: NOT filtered on latestVersion = true -->
-                <value>search.resourcetype:Item</value>
-                <!-- <value>search.resourcetype:Item OR search.resourcetype:Collection OR
-                    search.resourcetype:Community</value> -->
+                <!-- <value>search.resourcetype:Item</value> -->
+                <value>search.resourcetype:Item OR search.resourcetype:Collection OR
+                    search.resourcetype:Community</value>
                 <value>-withdrawn:true AND -discoverable:false</value>
             </list>
         </property>
