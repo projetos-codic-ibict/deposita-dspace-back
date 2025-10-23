@@ -30,11 +30,8 @@
             <repeatable>false</repeatable>
             <label>Identificador Dark</label>
             <input-type>onebox</input-type>
-            <hint>Este campo será preenchido automaticamente pelo sistema.</hint>
-            <required></required>
+            <hint>Este campo será preenchido pelos admins</hint>
             <visibility>workflow</visibility>
-
-
         </field>
     </row>
 </form>
@@ -3379,80 +3376,80 @@
         <value-pairs value-pairs-name="knowledge_area" dc-term="knowledgearea">
             <pair>
                 <displayed-value>Ciências agrárias</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Ciências agrárias</stored-value>
             </pair>
             <pair>
                 <displayed-value>Ciências biológicas</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Ciências biológicas</stored-value>
             </pair>
             <pair>
                 <displayed-value>Ciências da saúde</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Ciências da saúde</stored-value>
             </pair>
             <pair>
                 <displayed-value>Ciências exatas e da terra</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Ciências exatas e da terra</stored-value>
             </pair>
             <pair>
                 <displayed-value>Ciências humanas</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Ciências humanas</stored-value>
             </pair>
             <pair>
                 <displayed-value>Ciências sociais aplicadas</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Ciências sociais aplicadas</stored-value>
             </pair>
             <pair>
                 <displayed-value>Engenharias</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Engenharias</stored-value>
             </pair>
             <pair>
                 <displayed-value>Linguística, letras e artes</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Linguística, letras e artes</stored-value>
             </pair>
             <pair>
                 <displayed-value>Multidisciplinar</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Multidisciplinar</stored-value>
             </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="course_degree" dc-term="publisher.coursedegree">
             <pair>
                 <displayed-value>Graduação</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Graduação</stored-value>
             </pair>
             <pair>
                 <displayed-value>Especialização</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Especialização</stored-value>
             </pair>
             <pair>
                 <displayed-value>Mestrado</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Mestrado</stored-value>
             </pair>
             <pair>
                 <displayed-value>Doutorado</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Doutorado</stored-value>
             </pair>
             <pair>
                 <displayed-value>Pós-doutorado</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Pós-doutorado</stored-value>
             </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="course_type" dc-term="publisher.coursetype">
             <pair>
                 <displayed-value>Acadêmico</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Acadêmico</stored-value>
             </pair>
             <pair>
                 <displayed-value>Profissional</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Profissional</stored-value>
             </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="capes" dc-term="knowledgearea.capes">
             <pair>
                 <displayed-value>Programa não avaliado</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Programa não avaliado</stored-value>
             </pair>
             <pair>
                 <displayed-value>Administração pública e de empresas, Ciências contábeis e Turismo</displayed-value>
@@ -3655,22 +3652,22 @@
         <value-pairs value-pairs-name="sponsorship" dc-term="description.sponsorship">
             <pair>
                 <displayed-value>Sim</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Sim</stored-value>
             </pair>
             <pair>
                 <displayed-value>Não</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Não</stored-value>
             </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="rights" dc-term="rights">
             <pair>
                 <displayed-value>Eu concedo a licença</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Eu concedo a licença</stored-value>
             </pair>
             <pair>
                 <displayed-value>Eu não concedo a licença</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Eu não concedo a licença</stored-value>
             </pair>
         </value-pairs>
         
@@ -3681,295 +3678,295 @@
         <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
             <pair>
                 <displayed-value>Português</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Português</stored-value>
             </pair>
             <pair>
                 <displayed-value>Aimará
                 </displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Aimará</stored-value>
             </pair>
             <pair>
                 <displayed-value>Alemão</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Alemão</stored-value>
             </pair>
             <pair>
                 <displayed-value>Árabe
                 </displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Árabe</stored-value>
             </pair>
             <pair>
                 <displayed-value>Chinês</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Chinês</stored-value>
             </pair>
             <pair>
                 <displayed-value>Espanhol</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Espanhol</stored-value>
             </pair>
             <pair>
                 <displayed-value>Francês</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Francês</stored-value>
             </pair>
             <pair>
                 <displayed-value>Grego</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Grego</stored-value>
             </pair>
             <pair>
                 <displayed-value>Guarani</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Guarani</stored-value>
             </pair>
             <pair>
                 <displayed-value>Hindi</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Hindi</stored-value>
             </pair>
             <pair>
                 <displayed-value>Holandês</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Holandês</stored-value>
             </pair>
             <pair>
                 <displayed-value>Inglês</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Inglês</stored-value>
             </pair>
             <pair>
                 <displayed-value>Italiano</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Italiano</stored-value>
             </pair>
             <pair>
                 <displayed-value>Japonês</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Japonês</stored-value>
             </pair>
             <pair>
                 <displayed-value>Latim</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Latim</stored-value>
             </pair>
             <pair>
                 <displayed-value>Macro-jê</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Macro-jê</stored-value>
             </pair>
             <pair>
                 <displayed-value>Maya</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Maya</stored-value>
             </pair>
             <pair>
                 <displayed-value>Náhuatl</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Náhuatl</stored-value>
             </pair>
             <pair>
                 <displayed-value>Polonês</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Polonês</stored-value>
             </pair>
             <pair>
                 <displayed-value>Quíchua</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Quíchua</stored-value>
             </pair>
             <pair>
                 <displayed-value>Russo</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Russo</stored-value>
             </pair>
             <pair>
                 <displayed-value>Tupi</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>Tupi</stored-value>
             </pair>
         </value-pairs>
         <value-pairs value-pairs-name="institution_affiliation" dc-term="publisher.name">
     <pair>
         <displayed-value>Sem afiliação institucional</displayed-value>
-        <stored-value>sem_afiliação_institucional</stored-value>
+        <stored-value>Sem afiliação institucional</stored-value>
     </pair>
     <pair>
         <displayed-value>Banco Nacional de Desenvolvimento Econômico e Social (BNDES)</displayed-value>
-        <stored-value>bndes</stored-value>
+        <stored-value>Banco Nacional de Desenvolvimento Econômico e Social (BNDES)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro de Ensino de Brasília (UNICEUB)</displayed-value>
-        <stored-value>uniceub</stored-value>
+        <stored-value>Centro de Ensino de Brasília (UNICEUB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro de Tecnologia da Informação Renato Archer (CTI)</displayed-value>
-        <stored-value>cti</stored-value>
+        <stored-value>Centro de Tecnologia da Informação Renato Archer (CTI)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro Universitário Braz Cubas (CUB)</displayed-value>
-        <stored-value>cub</stored-value>
+        <stored-value>Centro Universitário Braz Cubas (CUB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro Universitário de Maringá (UNICESUMAR)</displayed-value>
-        <stored-value>unicesumar</stored-value>
+        <stored-value>Centro Universitário de Maringá (UNICESUMAR)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro Universitário de Sete Lagoas (UNIFEMM)</displayed-value>
-        <stored-value>unifemm</stored-value>
+        <stored-value>Centro Universitário de Sete Lagoas (UNIFEMM)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro Universitário Internacional (UNINTER)</displayed-value>
-        <stored-value>uninter</stored-value>
+        <stored-value>Centro Universitário Internacional (UNINTER)</stored-value>
     </pair>
     <pair>
         <displayed-value>Centro Universitário Univates (UNIVATES)</displayed-value>
-        <stored-value>univates</stored-value>
+        <stored-value>Centro Universitário Univates (UNIVATES)</stored-value>
     </pair>
     <pair>
         <displayed-value>Companhia de Pesquisa de Recursos Minerais (CPRM)</displayed-value>
-        <stored-value>cprm</stored-value>
+        <stored-value>Companhia de Pesquisa de Recursos Minerais (CPRM)</stored-value>
     </pair>
     <pair>
         <displayed-value>Conselho Federal de Biblioteconomia (CFB)</displayed-value>
-        <stored-value>cfb</stored-value>
+        <stored-value>Conselho Federal de Biblioteconomia (CFB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Empresa Brasileira de Pesquisa Agropecuária (Embrapa)</displayed-value>
-        <stored-value>embrapa</stored-value>
+        <stored-value>Empresa Brasileira de Pesquisa Agropecuária (Embrapa)</stored-value>
     </pair>
     <pair>
         <displayed-value>Escola Bahiana de Medicina e Saúde Pública (EBM)</displayed-value>
-        <stored-value>ebm</stored-value>
+        <stored-value>Escola Bahiana de Medicina e Saúde Pública (EBM)</stored-value>
     </pair>
     <pair>
         <displayed-value>Escola Nacional de Administração Pública (ENAP)</displayed-value>
-        <stored-value>enap</stored-value>
+        <stored-value>Escola Nacional de Administração Pública (ENAP)</stored-value>
     </pair>
     <pair>
         <displayed-value>Escola Nacional de Saúde Pública Sergio Arouca (ENSP)</displayed-value>
-        <stored-value>ensp</stored-value>
+        <stored-value>Escola Nacional de Saúde Pública Sergio Arouca (ENSP)</stored-value>
     </pair>
     <pair>
         <displayed-value>Faculdade de Ciências Biomédicas de Cacoal (FACIMED)</displayed-value>
-        <stored-value>facimed</stored-value>
+        <stored-value>Faculdade de Ciências Biomédicas de Cacoal (FACIMED)</stored-value>
     </pair>
     <pair>
         <displayed-value>Faculdade de Direito de Vitória (FDV)</displayed-value>
-        <stored-value>fdv</stored-value>
+        <stored-value>Faculdade de Direito de Vitória (FDV)</stored-value>
     </pair>
     <pair>
         <displayed-value>Faculdade de Educação e Meio Ambiente (FAEMA)</displayed-value>
-        <stored-value>faema</stored-value>
+        <stored-value>Faculdade de Educação e Meio Ambiente (FAEMA)</stored-value>
     </pair>
     <pair>
         <displayed-value>Faculdade Santo Agostinho (FSA)</displayed-value>
-        <stored-value>fsa</stored-value>
+        <stored-value>Faculdade Santo Agostinho (FSA)</stored-value>
     </pair>
     <pair>
         <displayed-value>Fundação Casa de Rui Barbosa (RUBI)</displayed-value>
-        <stored-value>rubi</stored-value>
+        <stored-value>Fundação Casa de Rui Barbosa (RUBI)</stored-value>
     </pair>
     <pair>
         <displayed-value>Fundação Getulio Vargas (FGV)</displayed-value>
-        <stored-value>fgv</stored-value>
+        <stored-value>Fundação Getulio Vargas (FGV)</stored-value>
     </pair>
     <pair>
         <displayed-value>Fundação João Pinheiro (FJP)</displayed-value>
-        <stored-value>fjp</stored-value>
+        <stored-value>Fundação João Pinheiro (FJP)</stored-value>
     </pair>
     <pair>
         <displayed-value>Fundação Oswaldo Cruz (FIOCRUZ)</displayed-value>
-        <stored-value>fiocruz</stored-value>
+        <stored-value>Fundação Oswaldo Cruz (FIOCRUZ)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT)</displayed-value>
-        <stored-value>ibict</stored-value>
+        <stored-value>Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto de Engenharia Nuclear (IEN)</displayed-value>
-        <stored-value>ien</stored-value>
+        <stored-value>Instituto de Engenharia Nuclear (IEN)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto de Pesquisa Econômica Aplicada (IPEA)</displayed-value>
-        <stored-value>ipea</stored-value>
+        <stored-value>Instituto de Pesquisa Econômica Aplicada (IPEA)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto de Pesquisas Energéticas e Nucleares (IPEN)</displayed-value>
-        <stored-value>ipen</stored-value>
+        <stored-value>Instituto de Pesquisas Energéticas e Nucleares (IPEN)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Evandro Chagas (IEC)</displayed-value>
-        <stored-value>iec</stored-value>
+        <stored-value>Instituto Evandro Chagas (IEC)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Federal da Paraíba (IFPB)</displayed-value>
-        <stored-value>ifpb</stored-value>
+        <stored-value>Instituto Federal da Paraíba (IFPB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco (IFPE)</displayed-value>
-        <stored-value>ifpe</stored-value>
+        <stored-value>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco (IFPE)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Federal do Amazonas (IFAM)</displayed-value>
-        <stored-value>ifam</stored-value>
+        <stored-value>Instituto Federal do Amazonas (IFAM)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Federal do Rio Grande do Norte (IFRN)</displayed-value>
-        <stored-value>ifrn</stored-value>
+        <stored-value>Instituto Federal do Rio Grande do Norte (IFRN)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Nacional de Metrologia, Qualidade e Tecnologia (INMETRO)</displayed-value>
-        <stored-value>inmetro</stored-value>
+        <stored-value>Instituto Nacional de Metrologia, Qualidade e Tecnologia (INMETRO)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Nacional de Pesquisas da Amazônia (INPA)</displayed-value>
-        <stored-value>inpa</stored-value>
+        <stored-value>Instituto Nacional de Pesquisas da Amazônia (INPA)</stored-value>
     </pair>
     <pair>
         <displayed-value>Instituto Nacional de Tecnologia (INT)</displayed-value>
-        <stored-value>int</stored-value>
+        <stored-value>Instituto Nacional de Tecnologia (INT)</stored-value>
     </pair>
     <pair>
         <displayed-value>Kroton Educacional S.A.</displayed-value>
-        <stored-value>kroton</stored-value>
+        <stored-value>Kroton Educacional S.A.</stored-value>
     </pair>
     <pair>
         <displayed-value>Marinha do Brasil (MB)</displayed-value>
-        <stored-value>marinha_do_brasil</stored-value>
+        <stored-value>Marinha do Brasil (MB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Museu Paraense Emílio Goeldi (MPEG)</displayed-value>
-        <stored-value>mpeg</stored-value>
+        <stored-value>Museu Paraense Emílio Goeldi (MPEG)</stored-value>
     </pair>
     <pair>
         <displayed-value>Pontifícia Universidade Católica do Rio de Janeiro (PUC-RIO)</displayed-value>
-        <stored-value>puc-rio</stored-value>
+        <stored-value>Pontifícia Universidade Católica do Rio de Janeiro (PUC-RIO)</stored-value>
     </pair>
     <pair>
         <displayed-value>Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)</displayed-value>
-        <stored-value>pucrs</stored-value>
+        <stored-value>Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)</stored-value>
     </pair>
     <pair>
         <displayed-value>Serviço Nacional de Aprendizagem Industrial Campus Integrado de Manufatura e Tecnologia (SENAI CIMATEC)</displayed-value>
-        <stored-value>senai_cimatec</stored-value>
+        <stored-value>Serviço Nacional de Aprendizagem Industrial Campus Integrado de Manufatura e Tecnologia (SENAI CIMATEC)</stored-value>
     </pair>
     <pair>
         <displayed-value>Superior Tribunal de Justiça (STJ)</displayed-value>
-        <stored-value>stj</stored-value>
+        <stored-value>Superior Tribunal de Justiça (STJ)</stored-value>
     </pair>
     <pair>
         <displayed-value>Tribunal Regional do Trabalho da 3ª Região (TRT-3)</displayed-value>
-        <stored-value>trt-3</stored-value>
+        <stored-value>Tribunal Regional do Trabalho da 3ª Região (TRT-3)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade Católica de Brasília (UCB)</displayed-value>
-        <stored-value>ucb</stored-value>
+        <stored-value>Universidade Católica de Brasília (UCB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade Católica de Salvador (UCSAL)</displayed-value>
-        <stored-value>ucsal</stored-value>
+        <stored-value>Universidade Católica de Salvador (UCSAL)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade Cruzeiro do Sul (UNICSUL)</displayed-value>
-        <stored-value>unicsul</stored-value>
+        <stored-value>Universidade Cruzeiro do Sul (UNICSUL)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)</displayed-value>
-        <stored-value>unilab</stored-value>
+        <stored-value>Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade de Caxias do Sul (UCS)</displayed-value>
-        <stored-value>ucs</stored-value>
+        <stored-value>Universidade de Caxias do Sul (UCS)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade de Passo Fundo (UPF)</displayed-value>
-        <stored-value>upf</stored-value>
+        <stored-value>Universidade de Passo Fundo (UPF)</stored-value>
     </pair>
     <pair>
         <displayed-value>Universidade de São Paulo (USP)</displayed-value>
-        <stored-value>usp</stored-value>
+        <stored-value>Universidade de São Paulo (USP)</stored-value>
     </pair>
 </value-pairs>
 
