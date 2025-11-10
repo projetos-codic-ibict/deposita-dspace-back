@@ -850,9 +850,9 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Permissão de acesso*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
+                    <hint>Para que o Deposita possa disseminar sua produção científica, é necessário conceder o acesso aberto ao documento. Reserve um momento para ler os termos da licença disponíveis ao final do formulário.
                     </hint>
                     <required></required>
                 </field>
@@ -1049,9 +1049,9 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Permissão de acesso*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
+                    <hint>Para que o Deposita possa disseminar sua produção científica, é necessário conceder o acesso aberto ao documento. Reserve um momento para ler os termos da licença disponíveis ao final do formulário.
                     </hint>
                     <required></required>
                 </field>
@@ -1293,9 +1293,9 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Permissão de acesso*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.
+                    <hint>Para que o Deposita possa disseminar sua produção científica, é necessário conceder o acesso aberto ao documento. Reserve um momento para ler os termos da licença disponíveis ao final do formulário.
                     </hint>
                     <required></required>
                 </field>
@@ -1511,9 +1511,9 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Permissão de acesso*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.</hint>
+                    <hint>Para que o Deposita possa disseminar sua produção científica, é necessário conceder o acesso aberto ao documento. Reserve um momento para ler os termos da licença disponíveis ao final do formulário.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1737,9 +1737,9 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Permissão de acesso*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.</hint>
+                    <hint>Para que o Deposita possa disseminar sua produção científica, é necessário conceder o acesso aberto ao documento. Reserve um momento para ler os termos da licença disponíveis ao final do formulário.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1929,9 +1929,9 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Licença*</label>
+                    <label>Permissão de acesso*</label>
                     <input-type value-pairs-name="rights">dropdown</input-type>
-                    <hint>Para que o DEPOSITA possa disseminar a produção é necessário que você concorde com os termos a seguir. Dedique um momento para ler os termos desta licença. Ao clicar no botão "Eu concedo a licença", você indica que aceita os termos propostos na licença.</hint>
+                    <hint>Para que o Deposita possa disseminar sua produção científica, é necessário conceder o acesso aberto ao documento. Reserve um momento para ler os termos da licença disponíveis ao final do formulário.</hint>
                     <required></required>
                 </field>
             </row>
@@ -3662,12 +3662,8 @@
 
         <value-pairs value-pairs-name="rights" dc-term="rights">
             <pair>
-                <displayed-value>Eu concedo a licença</displayed-value>
-                <stored-value>Eu concedo a licença</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Eu não concedo a licença</displayed-value>
-                <stored-value>Eu não concedo a licença</stored-value>
+                <displayed-value>Acesso aberto</displayed-value>
+                <stored-value>Acesso aberto</stored-value>
             </pair>
         </value-pairs>
         
